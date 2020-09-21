@@ -66,6 +66,16 @@ function categorysrt1() {
 	var x = document.getElementById("ztez828tag");
     x.style.display = "none";
 	
+	var x = document.getElementById("motoe2020");
+    x.style.display = "none";
+	var x = document.getElementById("motoe2020tag");
+    x.style.display = "none";
+	
+	var x = document.getElementById("androidgeneral");
+    x.style.display = "none";
+	var x = document.getElementById("androidgeneraltag");
+    x.style.display = "none";
+	
 	var x = document.getElementById("clearbutton");
     x.style.display = "block";
 } 
@@ -79,6 +89,16 @@ function categorygalaxys3() {
 	var x = document.getElementById("ztez828");
     x.style.display = "none";
 	var x = document.getElementById("ztez828tag");
+    x.style.display = "none";
+	
+	var x = document.getElementById("motoe2020");
+    x.style.display = "none";
+	var x = document.getElementById("motoe2020tag");
+    x.style.display = "none";
+	
+	var x = document.getElementById("androidgeneral");
+    x.style.display = "none";
+	var x = document.getElementById("androidgeneraltag");
     x.style.display = "none";
 	
 	var x = document.getElementById("clearbutton");
@@ -97,6 +117,16 @@ function categoryztez828() {
 	var x = document.getElementById("sgs3tag");
     x.style.display = "none";
 	
+	var x = document.getElementById("motoe2020");
+    x.style.display = "none";
+	var x = document.getElementById("motoe2020tag");
+    x.style.display = "none";
+	
+	var x = document.getElementById("androidgeneral");
+    x.style.display = "none";
+	var x = document.getElementById("androidgeneraltag");
+    x.style.display = "none";
+	
 	var x = document.getElementById("clearbutton");
     x.style.display = "block";
  
@@ -113,11 +143,20 @@ function cleartags() {
 	var x = document.getElementById("ztez828tag");
     x.style.display = "block";
 	
-  var x = document.getElementById("srt");
-  x.style.display = "block";
-  var x = document.getElementById("sgs3");
+    var x = document.getElementById("srt");
+    x.style.display = "block";
+    var x = document.getElementById("sgs3");
     x.style.display = "block";
 	
+	var x = document.getElementById("motoe2020");
+    x.style.display = "block";
+	var x = document.getElementById("motoe2020tag");
+    x.style.display = "block";
+	
+	var x = document.getElementById("androidgeneral");
+    x.style.display = "block";
+	var x = document.getElementById("androidgeneraltag");
+    x.style.display = "block";
 	
 	var x = document.getElementById("clearbutton");
     x.style.display = "none";
