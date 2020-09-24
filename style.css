@@ -6,6 +6,18 @@ body {
   transition: 0.5s;
 }
 
+a {
+	color: #1a8cff;
+	cursor: pointer;
+}
+
+code {
+	background: rgba(0, 0, 0, 0.059);
+	font-size: 18px;
+	font-family: Source Code Pro;
+	width: auto;
+}
+
 .content {
 max-width: 1270px;
 margin: auto;
@@ -495,6 +507,7 @@ p {
   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.4);
   transition: 0.3s;
   width: 100%;
+  cursor: pointer;
 }
 
 .filedlcard:hover {
