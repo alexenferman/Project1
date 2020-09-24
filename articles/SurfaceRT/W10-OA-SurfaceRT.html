@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto&family=Oswald&family=Open+Sans&display=swap" type="text/css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto&family=Oswald&family=Open+Sans&family=Source+Code+Pro&display=swap" type="text/css">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" type="text/css">
 <link rel="stylesheet" href="../../material/material.min.css">
 <link rel="stylesheet" href="../../style.css">
@@ -120,7 +120,7 @@ About
 <img src="../../img/date.png" style="width:18px; padding: 0px 0px 0px 10px;"/> 
 <h6 style="display: inline-block; line-height: 0; font-size: 14px;"> May 15th 2020  </h6>
 <img src="../../img/edit.png" style="width:18px; padding: 0px 0px 0px 10px;"/> 
-<h6 style="display: inline-block; line-height: 0; font-size: 14px;"> August 19th 2020  </h6>
+<h6 style="display: inline-block; line-height: 0; font-size: 14px;"> September 23rd 2020  </h6>
 <img src="../../img/user.png" style="width:18px; padding: 0px 0px 0px 10px;"/> 
 <h6 style="display: inline-block; line-height: 0; font-size: 14px;"> Alexenferman  </h6>
 </div>
@@ -151,7 +151,7 @@ The download links associated to Yandex Disk are not owned by Alexenferman. The 
 
 <p>
 <h4 class="opensans">Frequently asked questions</h4>
-<h6>A lot of people have asked the same questions, so here are some of the questions and answers: <a class="roboto">FAQ: Install Windows 10?</a></h6>
+<h6>A lot of people have asked the same questions, so here are some of the questions and answers: <a class="roboto" href="https://www.alexenferman.tk/devices/surface-rt-windows-10-faq">FAQ: Windows 10 on the Surface RT</a></h6>
 </p>
 
 <p class="paddingp">
@@ -263,24 +263,36 @@ The download links associated to Yandex Disk are not owned by Alexenferman. The 
 <p>
 <h4 class="opensans">Formatting partition 4</h4>
 <h6>In the command prompt window, type the following commands:</h6>
-<h6>□ diskpart</h6>
-<h6>□ sel dis 0</h6>
-<h6>□ sel par 4</h6>
-<h6>□ for quick fs = ntfs override</h6>
-<h6>□ exit</h6>
+</p>
+<p>
+<code>diskpart</code>
+</p>
+<p>
+<code>sel dis 0</code>
+</p>
+<p>
+<code>sel par 4</code>
+</p>
+<p>
+<code>for quick fs = ntfs override</code>
+</p>
+<p>
+<code>exit</code>
 </p>
 
 <p>
 <h4 class="opensans">Installing the patched Windows RT image</h4>
 <h6>In the command prompt window, type the following command:</h6>
-<h6>□ dism /apply-image /imagefile:<b>[DIRECTORY]</b> /applydir:c: /index:1</h6>
-
-
+<p>
+<code>dism /apply-image /imagefile:<b>[DIRECTORY]</b> /applydir:c: /index:1</code>
+</p>
 <div class="articlehorcardpadding">
 <div class="alertcard" style="background-color: #0099ff; color: white">
   <div class="alertcontainer">
-    <h6><b>[DIRECTORY]</b>: Replace this path with the path of the install.wim we copied to the drive.</h6> 
-	<h6>Example: dism /apply-image /imagefile:d:\sources\install.wim /applydir:c: /index:1</h6> 
+    <h6><b>[DIRECTORY]</b>: Replace this path with the path of the install.wim we copied to the drive.</h6>
+<p>	
+	<code>Example: dism /apply-image /imagefile:<b>d:\sources\install.wim</b> /applydir:c: /index:1</code> 
+	</p>
   </div>
 </div>
 </div>
@@ -347,7 +359,7 @@ The download links associated to Yandex Disk are not owned by Alexenferman. The 
 
 <p>
 <img class="rightfloatimg2" src="./img-W10-OA-SurfaceRT/securebootpolicy.png" style="padding: 20px;"></img>
-<h6>After restarting, you will see a screen like this:</h6>
+<h6>After restarting, you will see a "Secure Boot Debug Policy Applicator" screen.</h6>
 <h6>Using the Volume buttons, select the option "Accept and Install"</h6>
 <h6>Press the Windows button to select the option.</h6>
 <div class="articlehorcardpadding">
@@ -362,8 +374,12 @@ The download links associated to Yandex Disk are not owned by Alexenferman. The 
 <p>
 <h4 class="opensans">Installing the Secure Boot Debug Policy</h4>
 <h6>Run the command prompt and enter:</h6>
-<h6>□ bcdedit /set {default} testsigning on</h6>
-<h6>□ bcdedit /set {bootmgr} testsigning on</h6>
+<p>
+<code>bcdedit /set {default} testsigning on</code>
+</p>
+<p>
+<code>bcdedit /set {bootmgr} testsigning on</code>
+</p>
 <h6>Restart your tablet.</h6>
 <div class="articlehorcardpadding">
 <div class="alertcard" style="background-color: #ffc90e; color: black;">
@@ -460,22 +476,36 @@ The download links associated to Yandex Disk are not owned by Alexenferman. The 
 <p>
 <h4 class="opensans">Formatting partition 4</h4>
 <h6>In the command prompt window, type the following commands:</h6>
-<h6>□ diskpart</h6>
-<h6>□ sel dis 0</h6>
-<h6>□ sel par 4</h6>
-<h6>□ for quick fs = ntfs override</h6>
-<h6>□ exit</h6>
+</p>
+<p>
+<code>diskpart</code>
+</p>
+<p>
+<code>sel dis 0</code>
+</p>
+<p>
+<code>sel par 4</code>
+</p>
+<p>
+<code>for quick fs = ntfs override</code>
+</p>
+<p>
+<code>exit</code>
 </p>
 
 <p>
 <h4 class="opensans">Installing Windows 10 image</h4>
 <h6>In the command prompt window, type the following command:</h6>
-<h6>□ dism /apply-image /imagefile:<b>[DIRECTORY]</b> /applydir:c: /index:1</h6>
+<p>
+<code>dism /apply-image /imagefile:<b>[DIRECTORY]</b> /applydir:c: /index:1</code>
+</p>
 <div class="articlehorcardpadding">
 <div class="alertcard" style="background-color: #0099ff; color: white">
   <div class="alertcontainer">
-    <h6><b>[DIRECTORY]</b>: Replace this path with the path of the install.wim we copied to the drive.</h6> 
-	<h6>Example: dism /apply-image /imagefile:d:\sources\install.wim /applydir:c: /index:1</h6> 
+    <h6><b>[DIRECTORY]</b>: Replace this path with the path of the install.wim we copied to the drive.</h6>
+<p>	
+	<code>Example: dism /apply-image /imagefile:<b>d:\sources\install.wim</b> /applydir:c: /index:1</code> 
+	</p>
   </div>
 </div>
 </div>
@@ -525,11 +555,21 @@ The download links associated to Yandex Disk are not owned by Alexenferman. The 
 <p>
 <h4 class="opensans">Activating Windows 10</h4>
 <h6>Open Powershell and type:</h6>
-<h6>□ slmgr.vbs /upk</h6>
-<h6>□ slmgr /ipk NPPR9-FWDCX-D2C8J-H872K-2YT43</h6>
-<h6>□ slmgr /skms kms.03k.org</h6>
-<h6>□ slmgr /ato</h6>
-<h6>□ slmgr /skms zhang.yt</h6>
+</p>
+<p>
+<code>slmgr.vbs /upk</code>
+</p>
+<p>
+<code>slmgr /ipk NPPR9-FWDCX-D2C8J-H872K-2YT43</code>
+</p>
+<p>
+<code>slmgr /skms kms.03k.org</code>
+</p>
+<p>
+<code>slmgr /ato</code>
+</p>
+<p>
+<code>slmgr /skms zhang.yt</code>
 </p>
 
 <p>
