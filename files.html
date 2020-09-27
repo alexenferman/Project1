@@ -13,7 +13,7 @@
 <title>Alexenferman - Getting devices to their full potential</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
- <script src="main.js"></script> 
+<script src="main.js"></script> 
 </head>
 <!-- START -->
 <body>
@@ -106,90 +106,58 @@ About
 </div>
 </header>
 
- <div class="hero-image" style="background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('./img/headerimg.jpg');">
+<div id="hero-image" class="hero-image file-manager-file" style="height:30%; background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('./img/files_headerimg.png');">
   <div class="hero-text">
-    <h3 class="oswald">ALEXENFERMAN</h3>
-    <h6>Getting devices to their full potential</h6>
+    <h3 class="oswald">FILES</h3>
   </div>
 </div> 
 
+<div class="filepath" style="display: inline-block; background-color: #e6b800; width: 100%; color: white;">
+<div class="filepathcontent">
+<img width="30px" style="padding-right: 10px" src="./img/folder_white.png" /><h6 id="pathtext" style="display: inline-block;">/</h6>
+</div>
+</div>
+
 <div class="content">
 
-<h3 style="display: inline-block;" class="oswald"> ARTICLES </h3><div style="display: inline-block; padding: 30px 0px 15px 20px; vertical-align: top;"><button class="mdl-button mdl-js-button" onclick="window.location.href='./articles.html';">View All</button></div>
-<div class="articlebuttons">
-
-
-
-<div class="cardpadding2">
-<div class="card">
-<div class="cardimage">
-  <img class="darkcardimage" src="./thumbs/gobacktow8srt.png" alt="Avatar" style="width:100%;"/>
-  <h4 class="imagetext2">How to go back to Windows RT on the Surface RT and 2</h4> 
-</div>  
-  <div class="container">
-  <img src="./img/date.png" style="width:4.5%"/> 
-  <h6 style="display: inline-block; line-height: 0; font-size: 14px;"> August 25th 2020 </h6>
-  <img src="./img/user.png" style="width:4.5%"/> 
-  <h6 style="display: inline-block; line-height: 0; font-size: 14px;"> Alexenferman</h6>
-  </div>
-</div>
-</div>
-
-<div class="cardpadding2">
-<div class="card" onclick="window.location.href='./articles/SurfaceRT/W10-OA-SurfaceRT.html';">
-<div class="cardimage">
-  <img class="darkcardimage" src="./thumbs/w10oasrt.png" alt="Avatar" style="width:100%;"/>
-  <h4 class="imagetext2">How to install Windows 10 on the Surface RT</h4> 
-</div>  
-  <div class="container">
-  <img src="./img/date.png" style="width:4.5%"/> 
-  <h6 style="display: inline-block; line-height: 0; font-size: 14px;"> August 19th 2020 </h6>
-  <img src="./img/user.png" style="width:4.5%"/> 
-  <h6 style="display: inline-block; line-height: 0; font-size: 14px;"> Alexenferman</h6>
-  </div>
-</div>
+<div class="file-manager-file" id="root">
+<div class="articlehorcardpadding" onclick="SurfaceRT()"><div class="filemgrdlcard"><div class="filedlcontainer"><img src="./img/folder.png" style="width:30px; padding: 0px 20px 0px 0px; display: inline-block;"/><h6 style="display: inline-block;">Surface RT</h6> </div></div></div>
+<div class="articlehorcardpadding" onclick="ZTEAvidPlus()"><div class="filemgrdlcard"><div class="filedlcontainer"><img src="./img/folder.png" style="width:30px; padding: 0px 20px 0px 0px; display: inline-block;"/><h6 style="display: inline-block;">ZTE Avid Plus</h6> </div></div></div>
 </div>
 
 
-<div class="cardpadding2">
-<div class="card">
-<div class="cardimage">
-  <img class="darkcardimage" src="./thumbs/unlockblz828.png" alt="Avatar" style="width:100%;"/>
-  <h4 class="imagetext2">How to unlock the bootloader of older ZTE devices</h4> 
-</div>  
-  <div class="container">
-  <img src="./img/date.png" style="width:4.5%"/> 
-  <h6 style="display: inline-block; line-height: 0; font-size: 14px;"> May 19th 2020 </h6>
-  <img src="./img/user.png" style="width:4.5%"/> 
-  <h6 style="display: inline-block; line-height: 0; font-size: 14px;"> Alexenferman</h6>
-  </div>
-</div>
+<div class="file-manager-file hide" id="ZTEAvidPlus">
+<!-- /ZTE Avid Plus/ -->
+<div class="articlehorcardpadding"><div class="filemgrdlcard" onclick="root()"><div class="filedlcontainer"><img src="./img/files_up.png" style="width:30px; padding: 0px 20px 0px 0px; display: inline-block;"/><h6 style="display: inline-block;">UP</h6> </div></div></div>
+<div class="articlehorcardpadding"><div class="filemgrdlcard" onclick="ZTEAvidPlusCustomROMandRecoveryBuilds()"><div class="filedlcontainer"><img src="./img/folder.png" style="width:30px; padding: 0px 20px 0px 0px; display: inline-block;"/><h6 style="display: inline-block;">Custom ROM and Recovery Builds</h6> </div></div></div>
+<div class="articlehorcardpadding"><div class="filemgrdlcard" onclick="ZTEAvidPlusStockROM()"><div class="filedlcontainer"><img src="./img/folder.png" style="width:30px; padding: 0px 20px 0px 0px; display: inline-block;"/><h6 style="display: inline-block;">Stock ROM</h6> </div></div></div>
 </div>
 
-<div class="cardpadding2">
-<div class="card">
-<div class="cardimage">
-  <img class="darkcardimage" src="./thumbs/rootz828.png" alt="Avatar" style="width:100%;"/>
-  <h4 class="imagetext2">How to temporarely ROOT the ZTE Avid Plus Z828</h4> 
-</div>  
-  <div class="container">
-  <img src="./img/date.png" style="width:4.5%"/> 
-  <h6 style="display: inline-block; line-height: 0; font-size: 14px;"> May 8th 2020 </h6>
-  <img src="./img/user.png" style="width:4.5%"/> 
-  <h6 style="display: inline-block; line-height: 0; font-size: 14px;"> Alexenferman</h6>
-  </div>
-</div>
+
+<div class="file-manager-file hide" id="ZTEAvidPlusCustomROMandRecoveryBuilds">
+<!-- /ZTE Avid Plus/Custom ROM and Recovery Builds/ -->
+<div class="articlehorcardpadding"><div class="filemgrdlcard" onclick="ZTEAvidPlus()"><div class="filedlcontainer"><img src="./img/files_up.png" style="width:30px; padding: 0px 20px 0px 0px; display: inline-block;"/><h6 style="display: inline-block;">UP</h6> </div></div></div>
+<h6>Admin Note: Coming here Soon. Please go to <a href="https://www.alexenferman.tk/file-repository/zte-z828-romsrecovery-builds">https://www.alexenferman.tk/file-repository/zte-z828-romsrecovery-builds</a> </h6>
 </div>
 
-<h1 style="color: white;">...</h1>
-<h1 style="color: white;">....</h1>
-<h1 style="color: white;">.</h1>
+<div class="file-manager-file hide" id="ZTEAvidPlusStockROM">
+<!-- /ZTE Avid Plus/Stock ROM -->
+<div class="articlehorcardpadding"><div class="filemgrdlcard" onclick="ZTEAvidPlus()"><div class="filedlcontainer"><img src="./img/files_up.png" style="width:30px; padding: 0px 20px 0px 0px; display: inline-block;"/><h6 style="display: inline-block;">UP</h6> </div></div></div>
+<a href="https://combinefile.com/index.php?a=downloads&b=file&id=24024"><div class="articlehorcardpadding"><div class="filemgrdlcard" onclick="ZTEAvidPlusROMRecoveryBuildsLineageOS()"><div class="filedlcontainer"><img src="./img/zip-file.png" style="width:30px; padding: 0px 20px 0px 0px; display: inline-block;"/><h6 style="display: inline-block;">319210B0964Z828WV1.0.0B03.zip</h6> </div></div></div></a>
+<a href="https://oss.ztedevices.com/prod/en/direct/canada/z828/Z828%20SD%20card%20software%20package(328360B1186Z828RV1.0.0B03).zip"><div class="articlehorcardpadding"><div class="filemgrdlcard"><div class="filedlcontainer"><img src="./img/zip-file.png" style="width:30px; padding: 0px 20px 0px 0px; display: inline-block;"/><h6 style="display: inline-block;">Z828 SD card software package(32836...RV1.0.0B03).zip</h6> </div></div></div></a>
+<a href="./files/ZTEZ828/CanadaRogersZ828UpgradeGuide(Through an SD Card).pdf" download="GFG"><div class="articlehorcardpadding"><div class="filemgrdlcard"><div class="filedlcontainer"><img src="./img/pdf-file.png" style="width:30px; padding: 0px 20px 0px 0px; display: inline-block;"/><h6 style="display: inline-block;">Canada Rogers Z828 Upgrade Guide(Through an SD Card).pdf</h6> </div></div></div></a>
+</div>
+
+<div class="file-manager-file hide" id="SurfaceRT">
+<!-- /Surface RT/ -->
+<div class="articlehorcardpadding"><div class="filemgrdlcard" onclick="root()"><div class="filedlcontainer"><img src="./img/files_up.png" style="width:30px; padding: 0px 20px 0px 0px; display: inline-block;"/><h6 style="display: inline-block;">UP</h6> </div></div></div>
+<h6>Admin Note: Coming here Soon. Please go to <a href="https://www.alexenferman.tk/file-repository/surface-rt">https://www.alexenferman.tk/file-repository/surface-rt</a> </h6>
 </div>
 
 
 <!-- End of content -->
 </div>
-
+<!-- 
 <footer class="footer">
 <div class="footercontent">
 <div class="footersec2">
@@ -204,7 +172,7 @@ About
   </div>
 </div>
 </footer>
-
+ -->
 
 
 <script>
