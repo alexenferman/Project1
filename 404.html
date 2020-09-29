@@ -4,43 +4,112 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto&family=Oswald&display=swap" type="text/css">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" type="text/css">
-<link rel="stylesheet" href="./material/material.min.css">
-<link rel="stylesheet" href="./style.css">
-<script src="./material/material.min.js"></script>
-<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-<link rel="icon" type="image/png" href="./favicon.png"/>
+<link rel="icon" type="image/png" href="https://i.postimg.cc/P57QvHZW/logo.png"/>
 <title>404 not found - Alexenferman</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
- <script src="main.js"></script> 
 </head>
+<style>
+h1{
+font-size: 52px;
+font-weight: 300;
+}
+
+h6{
+font-family: "Roboto";
+font-size: 16px;
+font-weight: 300;
+}
+
+body {
+font-family: "Roboto";
+  background-color: white;
+   height: 100%;
+   width:100%;
+  transition: 0.5s;
+  margin:0;
+}
+
+.content {
+max-width: 1270px;
+margin: auto;
+}
+
+.header {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.3), 0 6px 20px 0 rgba(0, 0, 0, 0.3);
+  z-index:3;
+  background-color: #4d4d4d;
+  padding-top: 20px;
+  padding-right: 20px;
+  padding-bottom: 15px;
+  padding-left: 15px;
+}
+
+.sidenav {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 1), 0 6px 20px 0 rgba(0, 0, 0, 1);
+  z-index:4;
+  height: 100%; 
+  width: 0; 
+  position: fixed; 
+  top: 0; 
+  left: 0;
+  background-color: #4d4d4d; 
+  overflow-x: hidden;
+  padding-top: 60px;
+  transition: 0.5s; 
+}
+
+.button1 {
+transition: 0.5s;
+ box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.1);
+  background-color: #4CAF50; /* Green */
+  border: none;
+  color: white;
+  padding: 6px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  border-radius: 5px;
+    line-height: 0;
+  margin: 0;
+  font-weight: 400;
+}
+
+.button1:hover {
+transition: 0.5s;
+ box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.3), 0 6px 20px 0 rgba(0, 0, 0, 0.3);
+  background-color: #4CAF50; /* Green */
+  border: none;
+  color: white;
+  padding: 6px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  border-radius: 5px;
+  line-height: 0;
+  margin: 0;
+}
+</style>
+
+
 <!-- START -->
 <body>
 <!-- Sidebar Menu -->
 <header class="header" id="myHeader">
-<div id="mySidenav" class="sidenav">
-
-</div>
-<!-- Main Header -->
-
-<image class="logo" height="40px" src="./img/logo.png"></image>
-
+<image class="logo" height="40px" src="https://i.postimg.cc/P57QvHZW/logo.png"></image>
 </header>
-
-
 
 <div class="content">
 
 <h1>_/(o_0?)\_ 404_NOT_FOUND</h1>
 <h6>The page you are looking for was never here, was moved or was deleted.</h6>
-<button onclick="window.location.href='www.alexenferman.ml/index.html';" class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored">
- Go home
-</button>
+<a href="https://www.alexenferman.ml/"><button class="button1">
+<p style="font-family: 'Roboto';">GO HOME</p>
+</button></a>
 
 </div>
-
-
 
 <script>
 window.onscroll = function() {myFunction(); scrollFunction()};
