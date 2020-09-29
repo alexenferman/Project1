@@ -30,7 +30,7 @@ code {
 max-width: 1270px;
 margin: auto;
 }
- 
+
 .morebutton {
 display: inline-block;
 	cursor: pointer;
@@ -619,6 +619,28 @@ p {
 @media only screen and (max-width:550px) {
 .triple-image {
 	width: 99%;
+}
+}
+
+.quad-image {
+	width: 23%;
+}
+
+@media only screen and (max-width:800px) {
+.quad-image {
+	width: 40%;
+}
+}
+
+@media only screen and (max-width:750px) {
+.quad-image {
+	width: 50%;
+}
+}
+
+@media only screen and (max-width:550px) {
+.quad-image {
+	width: 70%;
 }
 }
 

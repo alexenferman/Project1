@@ -1,0 +1,197 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto&family=Oswald&family=Open+Sans&family=Source+Code+Pro&display=swap" type="text/css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" type="text/css">
+<link rel="stylesheet" href="../material/material.min.css">
+<link rel="stylesheet" href="../style.css">
+<script src="./material/material.min.js"></script>
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+<link rel="icon" type="image/png" href="../favicon.png"/>
+<title>File Manager - Alexenferman</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="../main.js"></script> 
+</head>
+<!-- START -->
+<body>
+<button onclick="topFunction()" id="myBtn" class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-button--colored">
+  <i class="material-icons">arrow_upward</i>
+</button>
+<!-- Sidebar Menu -->
+<header class="header" id="myHeader">
+<div id="mySidenav" class="sidenav">
+<!-- -->
+    <a><button class="mdl-button mdl-js-button mdl-button--icon closebtn" href="javascript:void(0)" class="closebtn" onclick="closeNav()" id="tt3">
+  <i class="material-icons">close</i>
+    <div class="mdl-tooltip" data-mdl-for="tt3">
+Close Menu
+</div>
+</button></a>
+<!-- -->
+  <a href="../index.html">
+<div class="headbutton nav_home"><img width="19px" src="../img/nav_home.png"/><h6 class="headtext"> HOME</h6></div>
+</a>
+<a href="../articles.html">
+<div class="headbutton nav_articles"><img width="20px" src="../img/nav_articles.png"/><h6 class="headtext"> ARTICLES</h6></div>
+</a>
+<a href="../files.html">
+<div class="headbutton nav_files"><img width="20px" src="../img/nav_folder.png"/><h6 class="headtext" > FILES</h6></div>
+</a>
+<a href="../tools.html">
+<div class="headbutton nav_tools"><img width="20px" src="../img/nav_tools.png"><h6 class="headtext"> TOOLS</h6></div>
+</a>
+  
+  <!-- -->
+  <div class="quickbuttons"> 
+  <!-- -->
+  <button class="mdl-button mdl-js-button mdl-button--icon" onclick="darkmode(); closeNav();" id="tt1">
+  <i class="material-icons">brightness_medium</i>
+  <div class="mdl-tooltip" data-mdl-for="tt1">
+  Dark Mode (This page)
+  </div></button>
+</div>
+<!-- 
+<div class="quickbuttons2"> 
+<button id="tt2" class="mdl-button mdl-js-button mdl-button--icon" onclick="darkmode()">
+  <i class="material-icons">place</i>
+  <div class="mdl-tooltip" data-mdl-for="tt2">
+Sitemap
+</div>
+</button>
+</div>
+
+<div class="quickbuttons2"> 
+<button class="mdl-button mdl-js-button mdl-button--icon" onclick="darkmode()">
+  <i class="material-icons">folder</i>
+</button>
+</div>
+
+<div class="quickbuttons2"> 
+<button id="tt5" class="mdl-button mdl-js-button mdl-button--icon">
+  <i class="material-icons">information</i>
+  <div class="mdl-tooltip" data-mdl-for="tt5">
+About
+</div>
+</button>
+</div>
+-->
+</div>
+<!-- Main Header -->
+<button onclick="openNav()" class="mdl-button mdl-js-button mdl-button--icon menubutton">
+  <i class="material-icons">menu</i>
+</button>
+<image class="logo" height="40px" src="../img/logo.png"></image>
+<div class="headerbutton">
+
+<a href="../index.html">
+<div class="headbutton nav_home"><img width="19px" src="../img/nav_home.png"/><h6 class="headtext"> HOME</h6></div>
+</a>
+<a href="../articles.html">
+<div class="headbutton nav_articles"><img width="20px" src="../img/nav_articles.png"/><h6 class="headtext"> ARTICLES</h6></div>
+</a>
+<a href="../files.html">
+<div class="headbutton nav_files"><img width="20px" src="../img/nav_folder.png"/><h6 class="headtext" > FILES</h6></div>
+</a>
+<a href="../tools.html">
+<div class="headbutton nav_tools"><img width="20px" src="../img/nav_tools.png"><h6 class="headtext"> TOOLS</h6></div>
+</a>
+<button class="mdl-button mdl-js-button mdl-button--icon">
+</button>
+</div>
+</header>
+
+<div class="filepath" style="display: inline-block; background-color: #e6b800; width: 100%; color: white;">
+<div class="filepathcontent">
+<img width="30px" style="padding-right: 10px" src="../img/folder_white.png" /><h6 id="pathtext" style="display: inline-block;">/ZTE Avid Plus/Custom ROM and Recovery Builds/</h6>
+</div>
+</div>
+
+<div class="filepathcontent" style="padding-top: 20px">
+<img style="padding: 10px" width="70" src="./ZTEZ828/ztez828.png"/>
+<div style="display: inline-block; line-height: 0; vertical-align: text-top;">
+<h6 style="margin: 2px; line-height: 0px; display: inline-block; font-size: 25px;">Builds For Achill </h6>
+<div>
+<h6 style="margin: 2px; font-size: 14px; color: #c4c4c4; display: inline-block;">Installation guide - Device Info - Changelog -</h6><a href="https://github.com/alexenferman/android_device_zte_achill" target="_blank"><h6 style="display: inline-block; font-size: 14px; padding-right: 5px; padding-left: 2px;">Device Tree </h6></a><a href="https://github.com/alexenferman/Android_Kernel_Zte_Achill" target="_blank"><h6 style="display: inline-block; font-size: 14px; "> - Kernel Tree</h6></a>
+</div>
+</div>
+</div>
+
+<div class="content">
+
+
+<a href="../files.html"><div class="articlehorcardpadding"><div class="filemgrdlcard"><div class="filedlcontainer"><img src="../img/files_up.png" style="width:30px; padding: 0px 20px 0px 0px; display: inline-block;"/><h6 style="display: inline-block;">UP</h6> </div></div></div></a>
+
+<div class="filedlcontainer"><img src="./img/lineage-logo.png" style="border-radius: 50%; width:30px; "/><h6 style="display: inline-block; padding-left: 20px;">Lineage OS</h6>
+<a href="https://drive.google.com/file/d/1skaVl8qlTsPpudrjWTcdBa-YTD2SB2iI/view" target="_blank"><div class="articlehorcardpadding"><div class="filemgrdlcard"><div class="filedlcontainer"><img src="./img/zip-file.png" style="width:30px; padding: 0px 20px 0px 0px; display: inline-block;"/><code style="display: inline-block;">[Latest]</code> <h6 style="display: inline-block;">lineage-14.1-20200408-achill.zip</h6></div></div></div></a></div>
+
+<div class="filedlcontainer"><img src="./img/lineage-logo.png" style="border-radius: 50%; width:30px; "/><h6 style="display: inline-block; padding-left: 20px;">Lineage Recovery</h6>
+<a href="https://drive.google.com/file/d/1VMdSdVv39yOC6kYUX3czgZwJh-RYnS4A/view" target="_blank"><div class="articlehorcardpadding"><div class="filemgrdlcard"><div class="filedlcontainer"><img src="./img/img-file.png" style="width:30px; padding: 0px 20px 0px 0px; display: inline-block;"/><code style="display: inline-block;">[Latest]</code> <h6 style="display: inline-block;">Lineage_Recovery-UNOFFICIAL-achill.img</h6></div></div></div></a></div>
+
+
+<div class="filedlcontainer"><img src="./img/twrp-logo.png" style="width:30px; padding: 0px 20px 0px 0px; display: inline-block;"/><h6 style="display: inline-block;">TWRP Recovery</h6>
+<a href="https://drive.google.com/file/d/1T85lkAphPtIUfyUch5vW5bK5Y1IfDzGP/view" target="_blank"><div class="articlehorcardpadding"><div class="filemgrdlcard"><div class="filedlcontainer"><img src="./img/img-file.png" style="width:30px; padding: 0px 20px 0px 0px; display: inline-block;"/><code style="display: inline-block;">[Latest]</code> <h6 style="display: inline-block;">TWRP-20200527-UNOFFICIAL-achill.img</h6></div></div></div></a>
+<a href="https://drive.google.com/file/d/1j9H5wQGoJIQZqEzV7v_3kvd_L_z4Wyc6/view" target="_blank"><div class="articlehorcardpadding"><div class="filemgrdlcard"><div class="filedlcontainer"><img src="./img/img-file.png" style="width:30px; padding: 0px 20px 0px 0px; display: inline-block;"/> <h6 style="display: inline-block;">TWRP-20200408-UNOFFICIAL-achill.img</h6></div></div></div></a></div>
+
+<div class="filedlcontainer"><img src="../img/folder.png" style="border-radius: 50%; width:30px; "/><h6 style="display: inline-block; padding-left: 20px;">Misc</h6>
+<a href="https://drive.google.com/file/d/1G7CabXBjCM5VNUB2pIrFhV5Ba6Xws5Rp/view" target="_blank"><div class="articlehorcardpadding"><div class="filemgrdlcard"><div class="filedlcontainer"><img src="./img/zip-file.png" style="width:30px; padding: 0px 20px 0px 0px; display: inline-block;"/><h6 style="display: inline-block;">System-dump.zip</h6></div></div></div></a>
+</div>
+
+
+
+<!-- End of content -->
+</div>
+<!-- 
+<footer class="footer">
+<div class="footercontent">
+<div class="footersec2">
+  <h6 style="padding: 0px 20px 0px 20px; vertical-align: middle;  line-height: 0px; display: inline-block;">&copy; 2020 Alexenferman, All rights reserved</h6>
+  
+  <div class="socialbuttons" style="display: inline-block;">
+  <img class="socialbutton" src="./img/youtube.png" style="width:30px; "/>
+  <img class="socialbutton" src="./img/git-logo.png" style="width:35px; "/>
+  <img class="socialbutton" src="./img/af-logo.png" style="width:30px; "/>
+  <img class="socialbutton" src="./img/xda-logo.png" style="width:28px;"/>
+  </div>
+  </div>
+</div>
+</footer>
+ -->
+
+
+<script>
+window.onscroll = function() {myFunction(); scrollFunction()};
+
+var header = document.getElementById("myHeader");
+var sticky = header.offsetTop;
+
+function myFunction() {
+  if (window.pageYOffset > sticky) {
+    header.classList.add("sticky");
+  } else {
+    header.classList.remove("sticky");
+  }
+}
+
+mybutton = document.getElementById("myBtn");
+
+// When the user scrolls down 20px from the top of the document, show the button
+
+function scrollFunction() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    mybutton.style.display = "block";
+  } else {
+    mybutton.style.display = "none";
+  }
+}
+
+// When the user clicks on the button, scroll to the top of the document
+function topFunction() {
+  document.body.scrollTop = 0; // For Safari
+  document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+} 
+</script>
+</body>
+</html> 
