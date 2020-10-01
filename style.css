@@ -106,7 +106,7 @@ padding: 20px;
 }
 
 .content {
-  padding: 16px;
+
 }
 
 .sticky + .content {
@@ -261,12 +261,6 @@ padding: 20px;
 #main {
   transition: 0.5s;
   padding: 20px;
-}
-
-/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
-@media screen and (max-height: 450px) {
-  .sidenav {padding-top: 15px;}
-  .sidenav a {font-size: 18px;}
 }
 
 #myBtn {
@@ -532,6 +526,14 @@ display: inline-block;
 	padding: 0px 0px 20px 0px;
 }
 
+.sourcecode {
+	font-family: "Source Code Pro";
+	font-size: 16px;
+	width: auto;
+	color: #3e3e3e;
+	
+}
+
 .roboto {
 	font-family: "Roboto";
 }
@@ -539,7 +541,7 @@ display: inline-block;
 /** Article page **/
 
 .article{
-box-shadow: 0 6px 12px 0 rgba(0,0,0,0.5);
+
   transition: 0.3s;
   width: 85%;	
   padding: 35px;
@@ -652,12 +654,14 @@ p {
 	float: right;
 	width: 35%;
 	padding: 20px;
+	padding-left: 40px;
 }
 
 .rightfloatimg2 {
 	float: right;
 	width: 44%;
 	padding: 20px;
+	padding-left: 40px;
 }
 
 .alertalongimage {
