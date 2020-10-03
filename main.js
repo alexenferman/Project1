@@ -141,6 +141,36 @@ var a = document.getElementsByClassName("srt");
  
 } 
 
+function categorymotoe2020() {
+var a = document.getElementsByClassName("srt");
+	for(var i = 0; i < a.length; i++)
+    {a[i].style.display="none";}
+	
+ var a = document.getElementsByClassName("sgs3");
+	for(var i = 0; i < a.length; i++)
+    {a[i].style.display="none";}
+	
+var a = document.getElementsByClassName("ztez828");
+	for(var i = 0; i < a.length; i++)
+    {a[i].style.display="none";}
+	
+	var x = document.getElementById("androidgeneral");
+    x.style.display = "none";
+	
+	var x = document.getElementById("srttag");
+    x.style.display = "none";
+	var x = document.getElementById("sgs3tag");
+    x.style.display = "none";
+	var x = document.getElementById("androidgeneraltag");
+    x.style.display = "none";
+	var x = document.getElementById("ztez828tag");
+    x.style.display = "none";
+	
+	var x = document.getElementById("clearbutton");
+    x.style.display = "block";
+ 
+} 
+
 function cleartags() {
 	var x = document.getElementById("sgs3tag");
 	x.style.display = "block";
