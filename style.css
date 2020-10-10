@@ -6,7 +6,30 @@ body {
   transition: 0.5s;
 }
 
+aside {
+	display: block;
+	width: 25%;
+	float: right;
+}
+
+object {
+	overflow:hidden;
+}
+
+.asidecontent{
+	height: 900px;
+	overflow: hidden;
+}
+
 footer {
+	padding: 0px;
+	margin: 0;
+}
+
+.footerstuff {
+	padding: 0px;
+	height: 70px;
+	width:100%;
 }
 
 ul {list-style-type: circle;}
@@ -43,10 +66,33 @@ pre {
 	font-family: monospace,monospace;
 }
 
+.page {
+max-width: 1570px;
+margin: auto;
+padding: 10px;
+}
+
 .content {
 max-width: 1270px;
 margin: auto;
 }
+
+.contentwithaside {
+	width: 76%;
+}
+
+@media only screen and (max-width:1100px) {
+
+aside {
+	display: none;
+}
+
+.contentwithaside {
+	width: 100%;
+}
+	
+}
+
 
 .morebutton {
 display: inline-block;
@@ -103,7 +149,7 @@ cursor: pointer;
 }
 
 .footer {
-padding: 20px;
+padding: 10px;
   color: white;
   z-index:1;
   background-color: #4d4d4d;
@@ -120,10 +166,6 @@ padding: 20px;
   position: fixed;
   top: 0;
   width: 100%
-}
-
-.content {
-
 }
 
 .sticky + .content {
@@ -260,11 +302,6 @@ padding: 20px;
   transition: 0.5s;
 }
 
-/* When you mouse over the navigation links, change their color */
-.sidenav a:hover {
-
-}
-
 /* Position and style the close button (top right corner) */
 .sidenav .closebtn {
   position: absolute;
@@ -272,6 +309,14 @@ padding: 20px;
   right: 20px;
   font-size: 36px;
   margin-left: 50px;
+}
+
+.sidenavbutton {
+	padding-bottom: 15px;
+}
+
+.sidenavbuttons {
+	padding-left: 30px;
 }
 
 /* Style page content - use this if you want to push the page content to the right when you open the side navigation */
@@ -308,44 +353,6 @@ padding: 20px;
   font-size: 30px;
 }
 
-#boxes {
-	width: 100%;
-    margin: 0px auto;
-}
-
-#boxes .box {
-    float: left;
-	margin: auto;
-	width: 33%;
-	padding: 10px;
-	box-sizing: border-box;
-}
-
-@media only screen and (max-width:1650px) {
-
-	#boxes .box {
-	width: 33%;
-	float: left;
-	}
-	
-}
-
-@media only screen and (max-width:1270px) {
-
-	#boxes .box {
-	width:50%;
-	float: left;
-	}
-	
-}
-
-@media only screen and (max-width:850px) {
-
-	#boxes .box {
-	width:100%;
-	}
-	
-}
 
 .quickbuttons  {
 	float: left;
@@ -410,15 +417,15 @@ cursor: pointer;
   width: 23%;
 }
 
-@media only screen and (max-width:1500px) {	
+@media only screen and (max-width:1500px) {
 .cardpadding2 {
   float: left;
   padding: 5px 5px 5px 5px;
-  width: 31%;
+  width: 48%;
 }	
 }
 
-@media only screen and (max-width:1070px) {	
+@media only screen and (max-width:1500px) {	
 .cardpadding2 {
   float: left;
   padding: 5px 5px 5px 5px;
@@ -466,9 +473,8 @@ position: relative;
 }
 
 .categorycardpadding {
-	
- display: inline-block;
-  padding: 8px 2px 8px 0px;
+	display: inline-block;
+	padding: 8px 2px 8px 0px;
 }
 
 
@@ -480,10 +486,6 @@ position: relative;
 .darkcardimage:hover {
 	transition: 0.5s;
 	filter: brightness(100%);
-}
-
-.tag {
-
 }
 
 
@@ -508,10 +510,10 @@ position: relative;
 }
 
 .categorycardtext {
-padding: 0px 10px 0px 2px;
-display: inline-block;
- line-height: 2px;
- vertical-align: top;
+	padding: 0px 10px 0px 2px;
+	display: inline-block;
+	line-height: 2px;
+	vertical-align: top;
 }
 
 .tagsection {
@@ -558,14 +560,13 @@ display: inline-block;
 /** Article page **/
 
 .article{
-
-  transition: 0.3s;
-  width: 85%;	
-  padding: 35px;
+	transition: 0.3s;
+	width: 95%;	
+	padding: 35px;
 }
 
 .articleinfo {
-padding: 20px 20px 20px 20px;
+	padding: 20px 20px 20px 20px;
 }
 
 .allarticleinfo {
@@ -573,7 +574,7 @@ padding: 20px 20px 20px 20px;
 }
 
 .robototitle {
-font-size: 30px;
+	font-size: 30px;
 }
 
 p {
@@ -735,4 +736,33 @@ display: none;
 .filepathcontent {
 	max-width: 1270px;
     margin: auto;
+}
+
+.asidecard {
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.5s;
+}
+
+.asidearticlecard {
+	display: inline-block;
+	cursor: pointer;
+	padding:0px;
+  transition: 0.5s;
+}
+
+.asidearticlecardpadding {
+	padding:7px;
+}
+
+.asidearticlecard:hover {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.4);
+}
+
+.asidecardpadding{
+	padding-bottom: 20px
+}
+
+.authorcard{
+	width:100%;
+	height: 170px;
 }

@@ -1,51 +1,118 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:300,400,500,700" type="text/css">
-<link rel="stylesheet" href="./material/material.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto&family=Oswald&display=swap" type="text/css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" type="text/css">
+<link rel="stylesheet" href="./material/material.min.css">
 <link rel="stylesheet" href="./style.css">
 <script src="./material/material.min.js"></script>
 <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-<style>
-body {
-    background-color: #00a7ff;
-}
-button {
-  color: blue;
-}
-</style>
+<link rel="icon" type="image/png" href="./favicon.png"/>
+<title>Alexenferman - Getting devices to their full potential</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+ <script src="main.js"></script> 
 </head>
+<!-- START -->
 <body>
-<button id="demo-menu-lower-left"
-        class="mdl-button mdl-js-button mdl-button--icon">
-  <i class="material-icons">more_vert</i>
+<button onclick="topFunction()" id="myBtn" class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-button--colored">
+  <i class="material-icons">arrow_upward</i>
 </button>
-
-<ul class="mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect"
-    for="demo-menu-lower-left">
-  <li class="mdl-menu__item">Some Action</li>
-  <li class="mdl-menu__item mdl-menu__item--full-bleed-divider">Another Action</li>
-  <li disabled class="mdl-menu__item">Disabled Action</li>
-  <li class="mdl-menu__item">Yet Another Action</li>
-</ul>
-<image class="logo" height="40px" src="./img/logo.png"/>
-<div class="headerbutton">
-<button class="mdl-button mdl-js-button mdl-js-ripple-effect">
-<text style="color:#ffffff">Home</text>
-</button>
-<button class="mdl-button mdl-js-button mdl-js-ripple-effect">
-<text style="color:#ffffff">📜 Articles</text>
-</button>
-<button class="mdl-button mdl-js-button mdl-js-ripple-effect">
-<text style="color:#ffffff">📂 Files</text>
-</button>
-<button class="mdl-button mdl-js-button mdl-js-ripple-effect">
-<text style="color:#ffffff">🔨 Tools</text>
-</button>
+<!-- Sidebar Menu -->
+<header class="header" id="myHeader">
+<div id="mySidenav" class="sidenav">
+<!-- -->
+    <a><button class="mdl-button mdl-js-button mdl-button--icon closebtn" href="javascript:void(0)" class="closebtn" onclick="closeNav()" id="tt3">
+  <i class="material-icons">close</i>
+    <div class="mdl-tooltip" data-mdl-for="tt3">
+Close Menu
+</div>
+</button></a>
+<!-- -->
+ <a href="./index.html">
+<div class="headbutton nav_home"><h6 class="headtext"> HOME</h6></div>
+</a>
+<a href="./articles.html">
+<div class="headbutton nav_articles"><h6 class="headtext"> ARTICLES</h6></div>
+</a>
+<a href="./files.html">
+<div class="headbutton nav_files"><h6 class="headtext" > FILES</h6></div>
+</a>
+<a href="./projects.html">
+<div class="headbutton nav_tools"><h6 class="headtext"> PROJECTS</h6></div>
+</a>
+  
+  <!-- -->
+  <div class="quickbuttons"> 
+  <!-- -->
+  <button class="mdl-button mdl-js-button mdl-button--icon" onclick="darkmode(); closeNav();" id="tt1">
+  <i class="material-icons">brightness_medium</i>
+  <div class="mdl-tooltip" data-mdl-for="tt1">
+  Dark Mode (This page)
+  </div></button>
 </div>
 
+</div>
+<!-- Main Header -->
+<button onclick="openNav()" class="mdl-button mdl-js-button mdl-button--icon menubutton">
+  <i class="material-icons">menu</i>
+</button>
+<image class="logo" height="40px" src="./img/logo.png"></image>
+<div class="headerbutton">
 
+<a href="./index.html">
+<div class="headbutton nav_home"><img width="19px" src="./img/nav_home.png"/><h6 class="headtext"> HOME</h6></div>
+</a>
+<a href="./articles.html">
+<div class="headbutton nav_articles"><img width="20px" src="./img/nav_articles.png"/><h6 class="headtext"> ARTICLES</h6></div>
+</a>
+<a href="./files.html">
+<div class="headbutton nav_files"><img width="20px" src="./img/nav_folder.png"/><h6 class="headtext" > FILES</h6></div>
+</a>
+<a href="./projects.html">
+<div class="headbutton nav_tools"><img width="20px" src="./img/nav_tools.png"><h6 class="headtext"> PROJECTS</h6></div>
+</a>
+<button class="mdl-button mdl-js-button mdl-button--icon">
+</button>
+</div>
+</header>
+
+
+
+
+<script>
+window.onscroll = function() {myFunction(); scrollFunction()};
+
+var header = document.getElementById("myHeader");
+var sticky = header.offsetTop;
+
+function myFunction() {
+  if (window.pageYOffset > sticky) {
+    header.classList.add("sticky");
+  } else {
+    header.classList.remove("sticky");
+  }
+}
+
+mybutton = document.getElementById("myBtn");
+
+// When the user scrolls down 20px from the top of the document, show the button
+
+function scrollFunction() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    mybutton.style.display = "block";
+  } else {
+    mybutton.style.display = "none";
+  }
+}
+
+// When the user clicks on the button, scroll to the top of the document
+function topFunction() {
+  document.body.scrollTop = 0; // For Safari
+  document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+} 
+</script>
 </body>
 </html> 

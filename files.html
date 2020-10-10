@@ -1,6 +1,14 @@
  <!DOCTYPE html>
 <html lang="en">
 <head>
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-180248741-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-180248741-1');
+</script>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto&family=Oswald&display=swap" type="text/css">
@@ -24,60 +32,16 @@
 <header class="header" id="myHeader">
 <div id="mySidenav" class="sidenav">
 <!-- -->
-    <a><button class="mdl-button mdl-js-button mdl-button--icon closebtn" href="javascript:void(0)" class="closebtn" onclick="closeNav()" id="tt3">
+<a><button class="mdl-button mdl-js-button mdl-button--icon closebtn" href="javascript:void(0)" class="closebtn" onclick="closeNav()" id="tt3">
   <i class="material-icons">close</i>
-    <div class="mdl-tooltip" data-mdl-for="tt3">
-Close Menu
-</div>
-</button></a>
-<!-- -->
- <a href="./index.html">
-<div class="headbutton nav_home"><h6 class="headtext"> HOME</h6></div>
-</a>
-<a href="./articles.html">
-<div class="headbutton nav_articles"><h6 class="headtext"> ARTICLES</h6></div>
-</a>
-<a href="./files.html">
-<div class="headbutton nav_files"><h6 class="headtext" > FILES</h6></div>
-</a>
-<a href="./projects.html">
-<div class="headbutton nav_tools"><h6 class="headtext"> PROJECTS</h6></div>
-</a>
-  
-  <!-- -->
-  <div class="quickbuttons"> 
-  <!-- -->
-  <button class="mdl-button mdl-js-button mdl-button--icon" onclick="darkmode(); closeNav();" id="tt1">
-  <i class="material-icons">brightness_medium</i>
-  <div class="mdl-tooltip" data-mdl-for="tt1">
-  Dark Mode (This page)
-  </div></button>
-</div>
-<!-- 
-<div class="quickbuttons2"> 
-<button id="tt2" class="mdl-button mdl-js-button mdl-button--icon" onclick="darkmode()">
-  <i class="material-icons">place</i>
-  <div class="mdl-tooltip" data-mdl-for="tt2">
-Sitemap
-</div>
-</button>
-</div>
+  <div class="mdl-tooltip" data-mdl-for="tt3">
+  Close Menu
+  </div>
+  </button></a>
+<object height="400px" data="./sidemenu.html"> 
+    ERROR
+</object>
 
-<div class="quickbuttons2"> 
-<button class="mdl-button mdl-js-button mdl-button--icon" onclick="darkmode()">
-  <i class="material-icons">folder</i>
-</button>
-</div>
-
-<div class="quickbuttons2"> 
-<button id="tt5" class="mdl-button mdl-js-button mdl-button--icon">
-  <i class="material-icons">information</i>
-  <div class="mdl-tooltip" data-mdl-for="tt5">
-About
-</div>
-</button>
-</div>
--->
 </div>
 <!-- Main Header -->
 <button onclick="openNav()" class="mdl-button mdl-js-button mdl-button--icon menubutton">
@@ -89,15 +53,7 @@ About
 <a href="./index.html">
 <div class="headbutton nav_home"><img width="19px" src="./img/nav_home.png"/><h6 class="headtext"> HOME</h6></div>
 </a>
-<a href="./articles.html">
-<div class="headbutton nav_articles"><img width="20px" src="./img/nav_articles.png"/><h6 class="headtext"> ARTICLES</h6></div>
-</a>
-<a href="./files.html">
-<div class="headbutton nav_files"><img width="20px" src="./img/nav_folder.png"/><h6 class="headtext" > FILES</h6></div>
-</a>
-<a href="./projects.html">
-<div class="headbutton nav_tools"><img width="20px" src="./img/nav_tools.png"><h6 class="headtext"> PROJECTS</h6></div>
-</a>
+
 <button class="mdl-button mdl-js-button mdl-button--icon">
 </button>
 </div>
@@ -118,6 +74,7 @@ About
 <div class="content">
 
 <div class="file-manager-file" id="root">
+<div class="articlehorcardpadding" onclick="MotoE2020()"><div class="filemgrdlcard"><div class="filedlcontainer"><img src="./img/folder.png" style="width:30px; padding: 0px 20px 0px 0px; display: inline-block;"/><h6 style="display: inline-block;">Moto E 2020</h6> </div></div></div>
 <div class="articlehorcardpadding" onclick="SurfaceRT()"><div class="filemgrdlcard"><div class="filedlcontainer"><img src="./img/folder.png" style="width:30px; padding: 0px 20px 0px 0px; display: inline-block;"/><h6 style="display: inline-block;">Surface RT</h6> </div></div></div>
 <div class="articlehorcardpadding" onclick="ZTEAvidPlus()"><div class="filemgrdlcard"><div class="filedlcontainer"><img src="./img/folder.png" style="width:30px; padding: 0px 20px 0px 0px; display: inline-block;"/><h6 style="display: inline-block;">ZTE Avid Plus</h6> </div></div></div>
 </div>
@@ -130,6 +87,13 @@ About
 <div class="articlehorcardpadding"><div class="filemgrdlcard" onclick="ZTEAvidPlusStockROM()"><div class="filedlcontainer"><img src="./img/folder.png" style="width:30px; padding: 0px 20px 0px 0px; display: inline-block;"/><h6 style="display: inline-block;">Stock ROM</h6> </div></div></div>
 </div>
 
+<div class="file-manager-file hide" id="MotoE2020">
+<!-- /Moto E 2020/ -->
+<div class="articlehorcardpadding"><div class="filemgrdlcard" onclick="root()"><div class="filedlcontainer"><img src="./img/files_up.png" style="width:30px; padding: 0px 20px 0px 0px; display: inline-block;"/><h6 style="display: inline-block;">UP</h6> </div></div></div>
+<a href="./files/motoe2020customroms.html"><div class="articlehorcardpadding"><div class="filemgrdlcard"><div class="filedlcontainer"><img src="./img/folder.png" style="width:30px; padding: 0px 20px 0px 0px; display: inline-block;"/><h6 style="display: inline-block;">Custom ROM and Recovery Builds</h6> </div></div></div></a>
+<a href="./files/motoe2020stockroms.html"><div class="articlehorcardpadding"><div class="filemgrdlcard"><div class="filedlcontainer"><img src="./img/folder.png" style="width:30px; padding: 0px 20px 0px 0px; display: inline-block;"/><h6 style="display: inline-block;">Stock ROMs</h6> </div></div></div></a>
+
+</div>
 
 <div class="file-manager-file hide" id="ZTEAvidPlusCustomROMandRecoveryBuilds">
 <!-- /ZTE Avid Plus/Custom ROM and Recovery Builds/ -->
@@ -141,8 +105,8 @@ About
 <!-- /ZTE Avid Plus/Stock ROM -->
 <div class="articlehorcardpadding"><div class="filemgrdlcard" onclick="ZTEAvidPlus()"><div class="filedlcontainer"><img src="./img/files_up.png" style="width:30px; padding: 0px 20px 0px 0px; display: inline-block;"/><h6 style="display: inline-block;">UP</h6> </div></div></div>
 <a href="https://combinefile.com/index.php?a=downloads&b=file&id=24024"><div class="articlehorcardpadding"><div class="filemgrdlcard" onclick="ZTEAvidPlusROMRecoveryBuildsLineageOS()"><div class="filedlcontainer"><img src="./img/zip-file.png" style="width:30px; padding: 0px 20px 0px 0px; display: inline-block;"/><h6 style="display: inline-block;">319210B0964Z828WV1.0.0B03.zip</h6> </div></div></div></a>
-<a href="https://oss.ztedevices.com/prod/en/direct/canada/z828/Z828%20SD%20card%20software%20package(328360B1186Z828RV1.0.0B03).zip"><div class="articlehorcardpadding"><div class="filemgrdlcard"><div class="filedlcontainer"><img src="./img/zip-file.png" style="width:30px; padding: 0px 20px 0px 0px; display: inline-block;"/><h6 style="display: inline-block;">Z828 SD card software package(32836...RV1.0.0B03).zip</h6> </div></div></div></a>
 <a href="./files/ZTEZ828/CanadaRogersZ828UpgradeGuide(Through an SD Card).pdf" download="CanadaRogersZ828UpgradeGuide(Through an SD Card).pdf"><div class="articlehorcardpadding"><div class="filemgrdlcard"><div class="filedlcontainer"><img src="./img/pdf-file.png" style="width:30px; padding: 0px 20px 0px 0px; display: inline-block;"/><h6 style="display: inline-block;">Canada Rogers Z828 Upgrade Guide(Through an SD Card).pdf</h6> </div></div></div></a>
+<a href="https://oss.ztedevices.com/prod/en/direct/canada/z828/Z828%20SD%20card%20software%20package(328360B1186Z828RV1.0.0B03).zip"><div class="articlehorcardpadding"><div class="filemgrdlcard"><div class="filedlcontainer"><img src="./img/zip-file.png" style="width:30px; padding: 0px 20px 0px 0px; display: inline-block;"/><h6 style="display: inline-block;">Z828 SD card software package(32836...RV1.0.0B03).zip</h6> </div></div></div></a>
 </div>
 
 <div class="file-manager-file hide" id="SurfaceRT">
@@ -204,5 +168,6 @@ function topFunction() {
   document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
 } 
 </script>
+
 </body>
 </html> 

@@ -259,6 +259,17 @@ function SurfaceRT() {
 	x.style.display = "block";
 }
 
+function MotoE2020() {
+	var a = document.getElementsByClassName("file-manager-file");
+	for(var i = 0; i < a.length; i++)
+    {a[i].style.display="none";}
+	
+	document.getElementById("pathtext").textContent="/Moto E 2020/";
+	
+	var x = document.getElementById("MotoE2020");
+	x.style.display = "block";
+}
+
 function root() {
 	var a = document.getElementsByClassName("file-manager-file");
 	for(var i = 0; i < a.length; i++)
@@ -272,3 +283,4 @@ function root() {
 	var x = document.getElementById("hero-image");
 	x.style.display = "block";
 }
+

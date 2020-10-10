@@ -1,6 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-180248741-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-180248741-1');
+</script>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto&family=Oswald&family=Open+Sans&display=swap" type="text/css">
@@ -24,35 +32,15 @@
 <header class="header" id="myHeader">
 <div id="mySidenav" class="sidenav">
 <!-- -->
-    <a><button class="mdl-button mdl-js-button mdl-button--icon closebtn" href="javascript:void(0)" class="closebtn" onclick="closeNav()" id="tt3">
+<a><button class="mdl-button mdl-js-button mdl-button--icon closebtn" href="javascript:void(0)" class="closebtn" onclick="closeNav()" id="tt3">
   <i class="material-icons">close</i>
-    <div class="mdl-tooltip" data-mdl-for="tt3">
-Close Menu
-</div>
-</button></a>
-<!-- -->
- <a href="./index.html">
-<div class="headbutton nav_home"><h6 class="headtext"> HOME</h6></div>
-</a>
-<a href="./articles.html">
-<div class="headbutton nav_articles"><h6 class="headtext"> ARTICLES</h6></div>
-</a>
-<a href="./files.html">
-<div class="headbutton nav_files"><h6 class="headtext" > FILES</h6></div>
-</a>
-<a href="./projects.html">
-<div class="headbutton nav_tools"><h6 class="headtext"> PROJECTS</h6></div>
-</a>
-  
-  <!-- -->
-  <div class="quickbuttons"> 
-  <!-- -->
-  <button class="mdl-button mdl-js-button mdl-button--icon" onclick="darkmode(); closeNav();" id="tt1">
-  <i class="material-icons">brightness_medium</i>
-  <div class="mdl-tooltip" data-mdl-for="tt1">
-  Dark Mode (This page)
-  </div></button>
-</div>
+  <div class="mdl-tooltip" data-mdl-for="tt3">
+  Close Menu
+  </div>
+  </button></a>
+<object height="400px" data="./sidemenu.html"> 
+    ERROR
+</object>
 
 </div>
 <!-- Main Header -->
@@ -144,7 +132,7 @@ Close Menu
 </div>  
   <div class="container">
   <img src="./img/date.png" style="width:4.5%"/> 
-  <h6 style="display: inline-block; line-height: 0; font-size: 14px;"> October 2nd 2020 </h6>
+  <h6 style="display: inline-block; line-height: 0; font-size: 14px;"> September 2nd 2020 </h6>
   <img src="./img/writer_alexenferman.png" style="width:4.5%"/> 
   <h6 style="display: inline-block; line-height: 0; font-size: 14px;"> Alexenferman</h6>
   </div>
@@ -304,13 +292,9 @@ Close Menu
 </div>
 
 <footer class="footer">
-<div class="footercontent">
-<div class="footersec2">
-  <h6 style="padding: 0px 30px 0px 30px; vertical-align: middle;  line-height: 0px; display: inline-block;">&copy; 2020 Alexenferman, All rights reserved</h6>
-  
-  </div>
-
-</div>
+<object class="footerstuff" data="./footer.html"> 
+    ERROR
+</object>
 </footer>
 
 
@@ -332,7 +316,6 @@ function myFunction() {
 
 mybutton = document.getElementById("myBtn");
 
-// When the user scrolls down 20px from the top of the document, show the button
 
 function scrollFunction() {
   if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
@@ -342,11 +325,18 @@ function scrollFunction() {
   }
 }
 
-// When the user clicks on the button, scroll to the top of the document
+
 function topFunction() {
-  document.body.scrollTop = 0; // For Safari
-  document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+  document.documentElement.scrollTop = 0;
 } 
+</script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-180248741-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-180248741-1');
 </script>
 </body>
 </html> 
