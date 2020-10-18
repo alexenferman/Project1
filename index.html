@@ -1,6 +1,14 @@
  <!DOCTYPE html>
 <html lang="en">
 <head>
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-180248741-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-180248741-1');
+</script>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto&family=Oswald&display=swap" type="text/css">
@@ -15,14 +23,6 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
  <script src="main.js"></script> 
- <script async src="https://www.googletagmanager.com/gtag/js?id=UA-180248741-1"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'UA-180248741-1');
-</script>
 </head>
 <!-- START -->
 <body>
@@ -40,33 +40,17 @@
   </div>
   </button></a>
 <object height="400px" data="./sidemenu.html"> 
-    ERROR
 </object>
-
 </div>
-
 </div>
 <!-- Main Header -->
 <button onclick="openNav()" class="mdl-button mdl-js-button mdl-button--icon menubutton">
   <i class="material-icons">menu</i>
 </button>
 <image class="logo" height="40px" src="./img/logo.png"></image>
-<div class="headerbutton">
-
-<a href="./index.html">
-<div class="headbutton nav_home"><img width="19px" src="./img/nav_home.png"/><h6 class="headtext"> HOME</h6></div>
-</a>
-<a href="./articles.html">
-<div class="headbutton nav_articles"><img width="20px" src="./img/nav_articles.png"/><h6 class="headtext"> ARTICLES</h6></div>
-</a>
-<a href="./files.html">
-<div class="headbutton nav_files"><img width="20px" src="./img/nav_folder.png"/><h6 class="headtext" > FILES</h6></div>
-</a>
-<a href="./projects.html">
-<div class="headbutton nav_tools"><img width="20px" src="./img/nav_tools.png"><h6 class="headtext"> PROJECTS</h6></div>
-</a>
-<button class="mdl-button mdl-js-button mdl-button--icon">
-</button>
+<div class="navmenudiv">
+<object class="navmenuframe" data="./navmenu.html"> 
+</object>
 </div>
 </header>
 
@@ -89,7 +73,6 @@
 </aside>
 
 <div class="contentwithaside">
-
 <h3 style="display: inline-block;" class="oswald"> ARTICLES </h3><div style="display: inline-block; padding: 30px 0px 15px 20px; vertical-align: top;"><button class="mdl-button mdl-js-button" onclick="window.location.href='./articles.html';">View All</button></div>
 <div class="articlebuttons">
 
@@ -124,7 +107,7 @@
 </div>
 
 <div class="cardpadding2">
-<div class="card" onclick="window.location.href='./dd';">
+<div class="card" onclick="window.location.href='https://old.alexenferman.com/how-to-go-back-to-windows-rt-on-the-surface-rt';">
 <div class="cardimage">
   <img class="darkcardimage" src="./thumbs/gobacktow8srt.png" alt="Avatar" style="width:100%;"/>
   <h4 class="imagetext2">How to go back to Windows RT on the Surface RT and 2</h4> 
@@ -153,16 +136,146 @@
   </div>
 </div>
 </div>
-<h3 style="display: inline-block;" class="oswald"> Files </h3><div style="display: inline-block; padding: 30px 0px 15px 20px; vertical-align: top;"><button class="mdl-button mdl-js-button" onclick="window.location.href='./articles.html';">View All</button></div>
+</div>
+
+<h3 style="display: inline-block;" class="oswald"> CATEGORIES </h3><div style="display: inline-block; padding: 30px 0px 15px 20px; vertical-align: top;"><button class="mdl-button mdl-js-button" onclick="window.location.href='./articles.html';">View All</button></div>
+
+<div class="articlebuttons">
+
+<a href="./articles.html">
+<div class="cardpadding2">
+<div class="card">
+<div class="cardimage">
+  <img class="darkcardimage" src="./img/surfacertq.png" alt="Avatar" style="width:100%;"/>
+  <h4 class="imagetext">Surface RT</h4> 
+</div>  
+  <div class="container">
+  <img src="./img/next.png" style="width:15px"/> 
+  <h6 style="display: inline-block; line-height: 0; font-size: 14px;"> surfacert </h6>
+
+  </div>
+</div>
+</div></a>
+
+<a href="./articles.html">
+<div class="cardpadding2">
+<div class="card">
+<div class="cardimage">
+  <img class="darkcardimage" src="./img/motoe2020q.png" alt="Avatar" style="width:100%;"/>
+  <h4 class="imagetext2">Moto E 2020</h4> 
+</div>  
+  <div class="container">
+  <img src="./img/next.png" style="width:15px"/> 
+  <h6 style="display: inline-block; line-height: 0; font-size: 14px;"> motoe2020 </h6>
+  </div>
+</div>
+</div></a>
+
+<a href="./articles.html">
+<div class="cardpadding2">
+<div class="card">
+<div class="cardimage">
+  <img class="darkcardimage" src="./img/ztez828q.png" alt="Avatar" style="width:100%;"/>
+  <h4 class="imagetext2">ZTE Avid Plus</h4> 
+</div>  
+  <div class="container">
+  <img src="./img/next.png" style="width:15px"/> 
+  <h6 style="display: inline-block; line-height: 0; font-size: 14px;"> ztez828 </h6>
+  </div>
+</div>
+</div></a>
+
+<a href="./articles.html">
+<div class="cardpadding2">
+<div class="card" onclick="window.location.href='./articles/ztez828/unlock-bl-ztez828.html';">
+<div class="cardimage">
+  <img class="darkcardimage" src="./img/galaxys3q.png" alt="Avatar" style="width:100%;"/>
+  <h4 class="imagetext2">Samsung Galaxy S3 i747</h4> 
+</div>  
+  <div class="container">
+    <img src="./img/next.png" style="width:15px"/> 
+  <h6 style="display: inline-block; line-height: 0; font-size: 14px;"> sgs3 </h6>
+  </div>
+</div>
+</div>
+</a>
+
+</div>
+
+<h3 style="display: inline-block;" class="oswald"> FILES </h3><div style="display: inline-block; padding: 30px 0px 15px 20px; vertical-align: top;"><button class="mdl-button mdl-js-button" onclick="window.location.href='./articles.html';">View All</button></div>
 
 <div>
 <a href="./files/motoe2020customroms.html"><div class="articlehorcardpadding" style="display:inline-block; width: 47%"><div class="filedlcard"><div class="filedlcontainer"><img src="./img/folder.png" style="width:30px; padding: 0px 20px 0px 0px; display: inline-block;"/><h6 style="display: inline-block;">Custom ROM and Recovery Builds</h6> </div></div></div></a>
 <a href="./files/motoe2020stockroms.html"><div class="articlehorcardpadding" style="display:inline-block; width: 47%"><div class="filedlcard"><div class="filedlcontainer" ><img src="./img/folder.png" style="width:30px; padding: 0px 20px 0px 0px; display: inline-block;"/><h6 style="display: inline-block;">Stock ROMs</h6> </div></div></div></a>
 </div>
 
-<h1 style="color: white;">...</h1>
-<h1 style="color: white;">...</h1>
+
+<h3 style="display: inline-block;" class="oswald"> OUR YOUTUBE CHANNEL </h3>
+<div style="padding-left: 9px;">
+<div class="card" style="width: 100%;">
+<div class="hero-image" style="background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('./img/ytbanner.png'); width: 100%; height: 250px; background-position: center; background-size: cover;">
+<img style="padding-top: 170px; display:inline-block;" src="./img/elektro.png" width="250px"/><a href="https://www.youtube.com/channel/UCLLGfiad0ThNWH-qkRZ1K5w" target="_blank"><div  style="float:right; padding-right: 10px; padding-top: 10px;"><div class="headbutton nav_tools"><h6 class="headtext"> GO TO YOUTUBE</h6></div></div></a>
+</div> 
+</div> 
 </div>
+
+<div style="padding-top: 20px"> 
+<div class="articlebuttons">
+<div class="cardpadding">
+<div class="card" onclick="window.open('https://www.youtube.com/watch?v=yzFqbBDKeXw','_blank')">
+<div class="cardimage">
+  <img class="darkcardimage" src="http://i3.ytimg.com/vi/yzFqbBDKeXw/maxresdefault.jpg" alt="Avatar" style="width:100%;"/>
+  <h4 class="imagetext">How to install Windows 10 on the Surface RT 💻</h4> 
+</div>  
+  <div class="container">
+   <img src="./img/youtube.png" style="width:4.5%"/> 
+  <h6 style="display: inline-block; line-height: 0; font-size: 14px;"> YouTube </h6>
+  <img src="./img/time.png" style="width:4.5%"/> 
+  <h6 style="display: inline-block; line-height: 0; font-size: 14px;"> 13:28 </h6>
+  <img src="./img/user.png" style="width:4.5%"/> 
+  <h6 style="display: inline-block; line-height: 0; font-size: 14px;"> Elektrohax</h6>
+  </div>
+</div>
+</div>
+<div class="cardpadding">
+<div class="card" onclick="window.open('https://www.youtube.com/watch?v=FdWtJKCcPh4','_blank')">
+<div class="cardimage">
+  <img class="darkcardimage" src="http://i3.ytimg.com/vi/FdWtJKCcPh4/maxresdefault.jpg" alt="Avatar" style="width:100%;"/>
+  <h4 class="imagetext">Bootloader Unlocking on older Qualcomm ZTE Devices...</h4> 
+</div>  
+  <div class="container">
+   <img src="./img/youtube.png" style="width:4.5%"/> 
+  <h6 style="display: inline-block; line-height: 0; font-size: 14px;"> YouTube </h6>
+  <img src="./img/time.png" style="width:4.5%"/> 
+  <h6 style="display: inline-block; line-height: 0; font-size: 14px;"> 5:08 </h6>
+  <img src="./img/user.png" style="width:4.5%"/> 
+  <h6 style="display: inline-block; line-height: 0; font-size: 14px;"> Elektrohax</h6>
+  </div>
+</div>
+</div>
+
+<div class="cardpadding">
+<div class="card" onclick="window.open('https://www.youtube.com/watch?v=3_tH0gA5QKk','_blank')">
+<div class="cardimage">
+  <img class="darkcardimage" src="https://i.ytimg.com/vi/3_tH0gA5QKk/maxresdefault.jpg" alt="Avatar" style="width:100%;"/>
+  <h4 class="imagetext">[New Method] How to root ZTE Avid Plus Z828 [No PC]</h4> 
+</div>  
+  <div class="container">
+   <img src="./img/youtube.png" style="width:4.5%"/> 
+  <h6 style="display: inline-block; line-height: 0; font-size: 14px;"> YouTube </h6>
+  <img src="./img/time.png" style="width:4.5%"/> 
+  <h6 style="display: inline-block; line-height: 0; font-size: 14px;"> 3:15 </h6>
+  <img src="./img/user.png" style="width:4.5%"/> 
+  <h6 style="display: inline-block; line-height: 0; font-size: 14px;"> Elektrohax</h6>
+  </div>
+</div>
+</div>
+
+</div>
+</div>
+
+<h1 style="color: white;">...</h1>
+<h1 style="color: white;">...</h1>
 
 <!-- End of content -->
 </div>
@@ -183,7 +296,7 @@ includeHTML();
 </script>
 
 <script>
-window.onscroll = function() {myFunction(); scrollFunction()};
+window.onscroll = function() {myFunction(); scrollFunction(); headerFunction()};
 
 var header = document.getElementById("myHeader");
 var sticky = header.offsetTop;
@@ -201,7 +314,7 @@ mybutton = document.getElementById("myBtn");
 // When the user scrolls down 20px from the top of the document, show the button
 
 function scrollFunction() {
-  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+  if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
     mybutton.style.display = "block";
   } else {
     mybutton.style.display = "none";

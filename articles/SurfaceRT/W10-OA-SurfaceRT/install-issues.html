@@ -191,6 +191,14 @@ Close Menu
 <p>
 <h4 class="opensans">Issue 4: Error 0xc0000428 or 0xc000000f after first Windows 10 Boot</h4>
 <img class="rightfloatimg2" src="../img-W10-OA-SurfaceRT/win10error.png"/>
+  <div class="articlehorcardpadding">
+<div class="alertcard alertalongimage" style="background-color: #ffc90e; color: black;">
+  <div class="alertcontainer">
+    <h6>It appears that this error is caused when the option called "Back up system files to a recovery drive" <b>was selected.</b> If you do not disable this option, it will show this error. The solution is to create a new USB drive without checking that option and to re-start the whole tutorial again.</h6> 
+  </div>
+</div>
+</div>
+<h6>You can try this fix, however many people were still not able to boot Windows 10.</h6>
 <h6>If your Surface shows error 0xc0000428 or 0xc000000f and says "A digital signature could not be verified", follow the steps below:</h6>
 <h6>Insert your USB drive in the tablet USB port.</h6>
 <h6>Hold the Volume down button and press the power button once.</h6>
@@ -235,7 +243,7 @@ Close Menu
 
 
 <script>
-window.onscroll = function() {myFunction(); scrollFunction()};
+window.onscroll = function() {myFunction(); scrollFunction(); headerFunction()};
 
 var header = document.getElementById("myHeader");
 var sticky = header.offsetTop;

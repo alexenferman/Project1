@@ -51,23 +51,10 @@
   <i class="material-icons">menu</i>
 </button>
 <image class="logo" height="40px" src="../../img/logo.png"></image>
-<div class="headerbutton">
-
-<a href="../../index.html">
-<div class="headbutton nav_home"><img width="19px" src="../../img/nav_home.png"/><h6 class="headtext"> HOME</h6></div>
-</a>
-<a href="../../articles.html">
-<div class="headbutton nav_articles"><img width="20px" src="../../img/nav_articles.png"/><h6 class="headtext"> ARTICLES</h6></div>
-</a>
-<a href="../../files.html">
-<div class="headbutton nav_files"><img width="20px" src="../../img/nav_folder.png"/><h6 class="headtext" > FILES</h6></div>
-</a>
-<a href="../../projects.html">
-<div class="headbutton nav_tools"><img width="20px" src="../../img/nav_tools.png"><h6 class="headtext"> PROJECTS</h6></div>
-</a>
-
-<button class="mdl-button mdl-js-button mdl-button--icon">
-</button>
+<div class="navmenudiv">
+<object class="navmenuframe" data="../../navmenu.html"> 
+</object>
+</div>
 </div>
 </header>
 <div class="hero-image" style="height:35%; background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('./img-root-moto-e-2020-magisk/head.png');">
@@ -339,12 +326,7 @@
 </div>
 <div class="comment-section" id="comment-section">
 </p>
-<style>
 
-#disqus_thread a {
-  color: #0099ff;
-}
-</style>
 <div id="disqus_thread"></div>
 <script id="dsq-count-scr" src="//alexenferman.disqus.com/count.js" async></script>
 <script>
@@ -378,7 +360,7 @@ s.setAttribute('data-timestamp', +new Date());
 
 
 <script>
-window.onscroll = function() {myFunction(); scrollFunction()};
+window.onscroll = function() {myFunction(); scrollFunction(); headerFunction()};
 
 var header = document.getElementById("myHeader");
 var sticky = header.offsetTop;

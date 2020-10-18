@@ -21,7 +21,7 @@
 <link rel="icon" type="image/png" href="../../favicon.png"/>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
- <script src="../../main.js"></script> 
+<script src="../../main.js"></script> 
 </head>
 <!-- START -->
 <body>
@@ -51,22 +51,9 @@
   <i class="material-icons">menu</i>
 </button>
 <image class="logo" height="40px" src="../../img/logo.png"></image>
-<div class="headerbutton">
-
-<a href="../../index.html">
-<div class="headbutton nav_home"><img width="19px" src="../../img/nav_home.png"/><h6 class="headtext"> HOME</h6></div>
-</a>
-<a href="../../articles.html">
-<div class="headbutton nav_articles"><img width="20px" src="../../img/nav_articles.png"/><h6 class="headtext"> ARTICLES</h6></div>
-</a>
-<a href="../../files.html">
-<div class="headbutton nav_files"><img width="20px" src="../../img/nav_folder.png"/><h6 class="headtext" > FILES</h6></div>
-</a>
-<a href="../../projects.html">
-<div class="headbutton nav_tools"><img width="20px" src="../../img/nav_tools.png"><h6 class="headtext"> PROJECTS</h6></div>
-</a>
-<button class="mdl-button mdl-js-button mdl-button--icon">
-</button>
+<div class="navmenudiv">
+<object class="navmenuframe" data="../../navmenu.html"> 
+</object>
 </div>
 </header>
  <div class="hero-image" style="height:35%; background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('./img-W10-OA-SurfaceRT/surface.png');">
@@ -75,7 +62,15 @@
   </div>
 </div> 
 
-<div class="content">
+<div class="page">
+
+<aside class="rightcolumn">
+<object class="asidecontent" data="../../aside.html"> 
+    Error.
+</object>
+</aside>
+
+<div class="contentwithaside">
 
 <div class="article">
 
@@ -165,6 +160,13 @@ The download links associated to Yandex Disk are not owned by Alexenferman. The 
 <h4 class="opensans">Creating a USB recovery drive</h4>
   <h6 class="justify">On <b>your Surface RT</b>, Click Start and click on the search icon, type "Create Recovery Drive" and select the search result. You may be asked to enter an administrator password or confirm your choice.</h6>
   <h6 class="justify">After the tool opens, <b>make sure</b> that "Back up system files to a recovery drive" <b>is not selected</b>, and then select "Next".</h6>
+  <div class="articlehorcardpadding">
+<div class="alertcard" style="background-color: #e62e00; color: white;">
+  <div class="alertcontainer">
+    <h6><b>Make sure</b> that "Back up system files to a recovery drive" <b>is not selected.</b> If you do not disable this option, it will cause errors in the future.</h6> 
+  </div>
+</div>
+</div>
   <h6 class="justify">Connect the USB flash drive to your computer, select it, and then select "Next".</h6>
   <h6 class="justify">Select "Create". A large number of files need to be copied to the recovery drive, so it may take some time to complete.</h6>
 </p>
@@ -619,14 +621,6 @@ The download links associated to Yandex Disk are not owned by Alexenferman. The 
 <h6 class="justify">Feel free to post comments (Feedback, problems to avoid) in this comment section.</h6>
 <h6 class="justify">Due to high demand, for Questions regarding the installation, (Is it fast? How well does it work?) ask your question on the XDA thread here or here. Any questions regarding the installation in this comment section will be ignored from now on.</h6>
 
-<style>
-#disqus_thread {
-background color: black;
-}
-#disqus_thread a {
-  color: #00ccff;
-}
-</style>
 <div id="disqus_thread"></div>
 <script>
 
@@ -644,7 +638,7 @@ s.setAttribute('data-timestamp', +new Date());
 <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
 
 </div>
-
+</div>
 </div>
 <!-- End of content -->
 </div>
@@ -658,9 +652,8 @@ s.setAttribute('data-timestamp', +new Date());
 
 
 
-
 <script>
-window.onscroll = function() {myFunction(); scrollFunction()};
+window.onscroll = function() {myFunction(); scrollFunction(); headerFunction()};
 
 var header = document.getElementById("myHeader");
 var sticky = header.offsetTop;
@@ -691,5 +684,6 @@ function topFunction() {
   document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
 } 
 </script>
+
 </body>
 </html> 
