@@ -1,0 +1,138 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto&family=Oswald&family=Open+Sans&family=Source+Code+Pro&display=swap" type="text/css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" type="text/css">
+<link rel="stylesheet" href="../material/material.min.css">
+<link rel="stylesheet" href="../style.css">
+<script src="./material/material.min.js"></script>
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+<link rel="icon" type="image/png" href="../favicon.png"/>
+<title>File Manager - Alexenferman</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="../main.js"></script> 
+<script src="./msg.js"></script> 
+<link rel="stylesheet" href="./msg.css">
+</head>
+<!-- START -->
+<body>
+<button onclick="topFunction()" id="myBtn" class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-button--colored">
+  <i class="material-icons">arrow_upward</i>
+</button>
+<!-- Sidebar Menu -->
+<header class="header" id="myHeader">
+<div id="mySidenav" class="sidenav">
+<!-- -->
+<a><button class="mdl-button mdl-js-button mdl-button--icon closebtn" href="javascript:void(0)" class="closebtn" onclick="closeNav()" id="tt3">
+  <i class="material-icons">close</i>
+  <div class="mdl-tooltip" data-mdl-for="tt3">
+  Close Menu
+  </div>
+  </button></a>
+<object height="400px" data="../sidemenu.html"> 
+    ERROR
+</object>
+
+</div>
+<!-- Main Header -->
+<button onclick="openNav()" class="mdl-button mdl-js-button mdl-button--icon menubutton">
+  <i class="material-icons">menu</i>
+</button>
+<image class="logo" height="40px" src="../img/logo.png"></image>
+<div class="headerbutton">
+
+<a href="../index.html">
+<div class="headbutton nav_home"><img width="19px" src="../img/nav_home.png"/><h6 class="headtext"> HOME</h6></div>
+</a>
+
+<button class="mdl-button mdl-js-button mdl-button--icon">
+</button>
+</div>
+</header>
+
+<div class="filepath" style="display: inline-block; background-color: #e6b800; width: 100%; color: white;">
+<div class="filepathcontent">
+<img width="30px" style="padding-right: 10px" src="../img/folder_white.png" /><h6 id="pathtext" style="display: inline-block;">/Samsung Galaxy J1 2016/Custom ROM and Recovery Builds/</h6>
+</div>
+</div>
+
+<div class="buildsfor" style="padding-top: 20px">
+<img style="padding: 10px" width="70" src="./img/j1xlte.jpg"/>
+<div style="display: inline-block; line-height: 0; vertical-align: text-top;">
+<h6 style="margin: 2px; line-height: 0px; display: inline-block; font-size: 25px;">Builds For j1xlte </h6>
+<div>
+<h6 style="margin: 2px; font-size: 14px; color: #c4c4c4; display: inline-block;">Installation guide - Device Info - Changelog -</h6><h6 onclick="MsgSgj6trigger()" style="display: inline-block; font-size: 14px; padding-right: 5px; padding-left: 2px;">Device Sources</h6>
+</div>
+</div>
+</div>
+
+<div class="content">
+
+
+<a href="../files.html"><div class="articlehorcardpadding"><div class="filemgrdlcard"><div class="filedlcontainer"><img src="../img/files_up.png" style="width:30px; padding: 0px 20px 0px 0px; display: inline-block;"/><h6 style="display: inline-block;">UP</h6> </div></div></div></a>
+
+<div class="filedlcontainer"><img src="./img/lineage-logo.png" style="border-radius: 50%; width:30px; "/><h6 style="display: inline-block; padding-left: 20px;">Lineage OS</h6>
+<a href="https://drive.google.com/file/d/1eJrhulIDOCCdbkhyDhe68zHWGGNN4hN1/view?usp=sharing" target="_blank"><div class="articlehorcardpadding"><div class="filemgrdlcard"><div class="filedlcontainer"><img src="./img/zip-file.png" style="width:30px; padding: 0px 20px 0px 0px; display: inline-block;"/><h6 style="display: inline-block;"><b>[Latest]</b> lineage-14.1-20201101-j1xlte.zip</h6></div></div></div></a></div>
+
+<div class="filedlcontainer"><img src="./img/lineage-logo.png" style="border-radius: 50%; width:30px; "/><h6 style="display: inline-block; padding-left: 20px;">Lineage Recovery</h6>
+<a href="https://drive.google.com/file/d/1MJarKKEh6kB1Eti_wDTvJcfEduixIqNB/view?usp=sharing" target="_blank"><div class="articlehorcardpadding"><div class="filemgrdlcard"><div class="filedlcontainer"><img src="./img/img-file.png" style="width:30px; padding: 0px 20px 0px 0px; display: inline-block;"/><h6 style="display: inline-block;"><b>[Latest]</b> Lineage_Recovery-UNOFFICIAL-j1xlte.img</h6></div></div></div></a></div>
+
+<div id="MsgSgj6" class="modal">
+
+  <!-- Modal content -->
+  <div class="modal-content">
+    <a><button class="mdl-button mdl-js-button mdl-button--icon closebtn close" class="closebtn" onclick="closewindow()" id="tt3">
+  <i class="material-icons">close</i>
+  <div class="mdl-tooltip" data-mdl-for="tt3">
+  Close Menu
+  </div>
+  </button></a>
+    <p>Coming Soon</p>
+  </div>
+
+</div>
+
+
+
+<!-- End of content -->
+</div>
+
+
+
+<script>
+window.onscroll = function() {myFunction(); scrollFunction(); headerFunction()};
+
+var header = document.getElementById("myHeader");
+var sticky = header.offsetTop;
+
+function myFunction() {
+  if (window.pageYOffset > sticky) {
+    header.classList.add("sticky");
+  } else {
+    header.classList.remove("sticky");
+  }
+}
+
+mybutton = document.getElementById("myBtn");
+
+// When the user scrolls down 20px from the top of the document, show the button
+
+function scrollFunction() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    mybutton.style.display = "block";
+  } else {
+    mybutton.style.display = "none";
+  }
+}
+
+// When the user clicks on the button, scroll to the top of the document
+function topFunction() {
+  document.body.scrollTop = 0; // For Safari
+  document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+} 
+</script>
+</body>
+</html> 

@@ -18,11 +18,10 @@
 <script src="./material/material.min.js"></script>
 <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 <link rel="icon" type="image/png" href="./favicon.png"/>
-<title>Forums - Alexenferman</title>
+<title>Dev - Alexenferman</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
  <script src="main.js"></script> 
- 
 </head>
 <!-- START -->
 <body>
@@ -55,28 +54,59 @@
 </div>
 </header>
 
- <div class="hero-image" style="height:80px; background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('./img/projects_header.jpg');">
+ <div class="hero-image" style="background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('./img/projects_header.jpg');">
   <div class="hero-text">
+    <h3 class="oswald">DEVELOPMENT</h3>
   </div>
 </div> 
 
+<div class="content">
+<h3 class="oswald">SURFACE_RT_RECOVERY_TOOLS [BETA]</h3>
 
 
-<style>
-.iframe {
-height: calc(100vh - 40px) !important;
-width: 100% !important;
-}
-</style>
+<div style=" width: 100%; padding-bottom: 40px;" class="cardpadding2">
+<div class="asidecard">
+  <div class="container" style="cursor: default; padding-top: 18px; padding-bottom: 18px;">
+  <img width="500px" src="./projects/img/srttools.png" />
+  <a href="./projects.html" style="float: right;">
+<div class="headbutton nav_articles_selected"><h6 class="headtext"> GO TO GITHUB PROJECT</h6></div>
+</a>
+  </div>
+</div>
+</div>
 
-<h4 style="padding-left: 30px">Not Available<h4>
+<h3 class="oswald">ARM STORE</h3>
+
+<div style="width: 100%; padding-bottom: 40px;" class="cardpadding2">
+<div class="asidecard">
+  <div class="container" style="cursor: default; padding-top: 18px; padding-bottom: 18px;">
+  <img width="500px" src="./projects/img/armstore.png" />
+  <a href="./projects.html" style="float: right;">
+<div class="headbutton nav_files_selected"><h6 class="headtext"> GO TO XDA THREAD</h6></div>
+</a>
+  </div>
+</div>
+</div>
 
 
 
-<!--iframe style="margin-top: -42px; margin-bottom: -42px;" src="https://aem18gjt2xg5.forum----.com/" class="iframe">  </iframe-->
+<p>.</p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<h3 class="oswald">🚧 MORE COMING SOON</h3>
 
+<!-- End of content -->
+</div>
 
-<!-- End of content actif -->
+<footer class="footer">
+<object class="footerstuff" data="./footer.html"> 
+    ERROR
+</object>
+</footer>
 
 
 
@@ -85,10 +115,6 @@ window.onscroll = function() {myFunction(); scrollFunction(); headerFunction()};
 
 var header = document.getElementById("myHeader");
 var sticky = header.offsetTop;
-
-  function resizeIframe(obj) {
-    obj.style.height = obj.contentWindow.document.documentElement.scrollHeight + 'px';
-  }
 
 function myFunction() {
   if (window.pageYOffset > sticky) {

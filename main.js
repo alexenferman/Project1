@@ -272,6 +272,29 @@ function MotoE2020() {
 	x.style.display = "block";
 }
 
+function MyGicaTV() {
+	var a = document.getElementsByClassName("file-manager-file");
+	for(var i = 0; i < a.length; i++)
+    {a[i].style.display="none";}
+	
+	document.getElementById("pathtext").textContent="/My Gica TV Boxes/";
+	
+	var x = document.getElementById("MyGicaTV");
+	x.style.display = "block";
+}
+
+function Sgj16() {
+	var a = document.getElementsByClassName("file-manager-file");
+	for(var i = 0; i < a.length; i++)
+    {a[i].style.display="none";}
+	
+	document.getElementById("pathtext").textContent="/Samsung Galaxy J1 2016/";
+	
+	var x = document.getElementById("Sgj16");
+	x.style.display = "block";
+}
+
+
 function root() {
 	var a = document.getElementsByClassName("file-manager-file");
 	for(var i = 0; i < a.length; i++)

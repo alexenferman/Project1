@@ -1,28 +1,19 @@
  <!DOCTYPE html>
 <html lang="en">
 <head>
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-180248741-1"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'UA-180248741-1');
-</script>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto&family=Oswald&display=swap" type="text/css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto&family=Oswald&family=Open+Sans&family=Source+Code+Pro&display=swap" type="text/css">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" type="text/css">
-<link rel="stylesheet" href="./material/material.min.css">
-<link rel="stylesheet" href="./style.css">
+<link rel="stylesheet" href="../material/material.min.css">
+<link rel="stylesheet" href="../style.css">
 <script src="./material/material.min.js"></script>
 <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-<link rel="icon" type="image/png" href="./favicon.png"/>
-<title>Forums - Alexenferman</title>
+<link rel="icon" type="image/png" href="../favicon.png"/>
+<title>File Manager - Alexenferman</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
- <script src="main.js"></script> 
- 
+<script src="../main.js"></script> 
 </head>
 <!-- START -->
 <body>
@@ -39,7 +30,7 @@
   Close Menu
   </div>
   </button></a>
-<object height="400px" data="./sidemenu.html"> 
+<object height="400px" data="../sidemenu.html"> 
     ERROR
 </object>
 
@@ -48,35 +39,39 @@
 <button onclick="openNav()" class="mdl-button mdl-js-button mdl-button--icon menubutton">
   <i class="material-icons">menu</i>
 </button>
-<image class="logo" height="40px" src="./img/logo.png"></image>
-<div class="navmenudiv">
-<object class="navmenuframe" data="./navmenu.html"> 
-</object>
+<image class="logo" height="40px" src="../img/logo.png"></image>
+<div class="headerbutton">
+
+<a href="../index.html">
+<div class="headbutton nav_home"><img width="19px" src="../img/nav_home.png"/><h6 class="headtext"> HOME</h6></div>
+</a>
+
+<button class="mdl-button mdl-js-button mdl-button--icon">
+</button>
 </div>
 </header>
 
- <div class="hero-image" style="height:80px; background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('./img/projects_header.jpg');">
-  <div class="hero-text">
-  </div>
-</div> 
+<div class="filepath" style="display: inline-block; background-color: #e6b800; width: 100%; color: white;">
+<div class="filepathcontent">
+<img width="30px" style="padding-right: 10px" src="../img/folder_white.png" /><h6 id="pathtext" style="display: inline-block;">/Moto E 2020/Stock ROMs/</h6>
+</div>
+</div>
 
 
 
-<style>
-.iframe {
-height: calc(100vh - 40px) !important;
-width: 100% !important;
-}
-</style>
-
-<h4 style="padding-left: 30px">Not Available<h4>
+<div class="content">
 
 
+<a href="../files.html"><div class="articlehorcardpadding"><div class="filemgrdlcard"><div class="filedlcontainer"><img src="../img/files_up.png" style="width:30px; padding: 0px 20px 0px 0px; display: inline-block;"/><h6 style="display: inline-block;">UP</h6> </div></div></div></a>
 
-<!--iframe style="margin-top: -42px; margin-bottom: -42px;" src="https://aem18gjt2xg5.forum----.com/" class="iframe">  </iframe-->
+<a href="./mygicatvroot/MyGicaTVRootpatch.img" target="_blank"><div class="articlehorcardpadding"><div class="filemgrdlcard"><div class="filedlcontainer"><img src="./img/img-file.png" style="width:30px; padding: 0px 20px 0px 0px; display: inline-block;"/><h6 style="display: inline-block;">MyGicaTVRootpatch.img</h6></div></div></div></a></div>
+
+</div>
 
 
-<!-- End of content actif -->
+
+<!-- End of content -->
+</div>
 
 
 
@@ -85,10 +80,6 @@ window.onscroll = function() {myFunction(); scrollFunction(); headerFunction()};
 
 var header = document.getElementById("myHeader");
 var sticky = header.offsetTop;
-
-  function resizeIframe(obj) {
-    obj.style.height = obj.contentWindow.document.documentElement.scrollHeight + 'px';
-  }
 
 function myFunction() {
   if (window.pageYOffset > sticky) {
@@ -116,6 +107,5 @@ function topFunction() {
   document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
 } 
 </script>
-
 </body>
 </html> 

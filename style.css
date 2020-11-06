@@ -29,8 +29,9 @@ footer {
 
 .footerstuff {
 	padding: 0px;
-	height: 70px;
+	height: 68px;
 	width:100%;
+	overflow: hidden;
 }
 
 ul {list-style-type: circle;}
@@ -152,6 +153,7 @@ cursor: pointer;
 }
 
 .footer {
+	box-shadow: 0 -10px 16px 0 rgba(0,0,0,0.2);
 padding: 10px;
   color: white;
   z-index:1;
@@ -161,7 +163,7 @@ padding: 10px;
 }
 
 .footersec2 {
-	height: 50px;
+	height: 48px;
 }
 
 /* The sticky class is added to the header with JS when it reaches its scroll position */
@@ -182,6 +184,24 @@ padding: 10px;
  	padding-right: 20px;
 	padding-left: 17px;
 	padding-bottom: 4px;
+}
+
+.yt {
+	cursor: pointer;
+	transition: 0.5s;
+	display: inline-block;
+    padding-top: 0px;
+	padding-bottom: 4px;
+	padding-left: 10px;
+	padding-right: 10px;
+}
+
+.yt:hover {
+	transition: 0.5s;
+	background-color: #ff3300;
+	transition: 0.5s;
+	box-shadow: 0 2px 8px 0 rgba(0,0,0,0.9);
+	display: inline-block;
 }
 
 .headbutton:hover {
@@ -250,7 +270,7 @@ padding: 10px;
 
 .navmenuframe {
 	overflow: hidden;
-	width: 550px;
+	width: 500px;
 	height: 60px;
     display: block;
 }
@@ -772,6 +792,11 @@ display: none;
 .filepathcontent {
 	padding-left: 10px;
 	padding-top: 6px;
+	max-width: 1270px;
+    margin: auto;
+}
+
+.buildsfor {
 	max-width: 1270px;
     margin: auto;
 }
