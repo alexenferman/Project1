@@ -463,6 +463,19 @@ cursor: pointer;
 }
 }
 
+.ghostcard {
+ display: block;
+ width: 32%;
+ padding: 6px;
+ float: left;
+}
+
+@media only screen and (max-width:1070px) {	
+.ghostcard {
+ display: none;
+}	
+}
+
 .cardpadding2 {
   float: left;
   padding: 5px;
