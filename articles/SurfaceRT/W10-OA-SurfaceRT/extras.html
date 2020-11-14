@@ -45,10 +45,9 @@
 </object>
 </div>
 </header>
-
  <div class="hero-image" style="height:35%; background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../img-W10-OA-SurfaceRT/surface.png');">
   <div class="hero-text">
-    <h3 class="oswald">HELP SECTION</h3>
+    <h3 class="oswald">EXTRAS</h3>
   </div>
 </div> 
 
@@ -70,35 +69,13 @@
 <p></p>
 
 <p>
-<h4 class="opensans">Issue 1: Windows Boot Manager error 0xc000000f after Secure boot patch reboot</h4>
+<h4 class="opensans">Windows 10 RT App-Store by Alexenferman</h4>
 <img class="rightfloatimg2" src="../img-W10-OA-SurfaceRT/secureboot000.png"/>
-<h6>If you haven't already disabled UAC, disable it by running this registry file as administrator:</h6>
-<div class="articlehorcardpadding">
-<div class="filedlcard alertalongimage" onclick="window.open('https://drive.google.com/file/d/1kc0PalRjfdKXnlbkAkNYT_c2SNbjBz4q/view','_blank')">
-  <div class="filedlcontainer">
-    <img src="../../../img/reg-file.png" style="width:30px; padding: 0px 20px 0px 0px; display: inline-block;"/><h6 style="display: inline-block;">Disabling_UAC.reg</h6> 
-  </div>
-</div>
-</div>
-<h6>Now, follow the <a href="../W10-OA-SurfaceRT.html#mod-registry"><u>Modifying Registry keys</u></a> section again.</h6>
-<h6 style="display: inline-block; line-height: 0px;">Open the Command prompt and type: </h6><h6 class="sourcecode" style="line-height: 0px; display: inline-block; padding-left: 7px;"> mountvol s: /s</h6>
-<h6>Manually copy the SecureBootDebug.efi file from the SecureBootPatch folder to s:\efi\microsoft\boot\</h6>
-<h6 style="display: inline-block; line-height: 0px;">Type: </h6><h6 class="sourcecode" style="line-height: 0px; display: inline-block; padding-left: 7px;"> mountvol s: /d</h6>
-<h6>Run InstallPolicy.cmd again</h6>
-<h6>Restart the tablet</h6>
-<h6>Once you see the Secureboot screen, select the "Accept and install" option using the volume buttons and press on the Windows button to continue.</h6>
+<h6>An alternative store solution to the old Windows store</h6>
+<h6>Read Installation tutorial and Download V.2.0</h6>
 </p>
 
-<p></p>
-<p id="test-mode-error"></p>
-<p></p>
-<p></p>
-<p></p>
 
-<p>
-<h4 class="opensans">Issue 2: Test mode "An error has occurred while setting the element data" error</h4>
-<img class="rightfloatimg2" src="../img-W10-OA-SurfaceRT/errorelementdata.jpg"/>
-<h6>If you haven't already disabled UAC, disable it by running this registry file as administrator:</h6>
 <div class="articlehorcardpadding">
 <div class="filedlcard alertalongimage" onclick="window.open('https://drive.google.com/file/d/1kc0PalRjfdKXnlbkAkNYT_c2SNbjBz4q/view','_blank')">
   <div class="filedlcontainer">
@@ -106,6 +83,17 @@
   </div>
 </div>
 </div>
+
+
+<p>
+<h4 class="opensans">Remove the "This build of Windows will expire soon" warning</h4>
+<img class="rightfloatimg2" src="../img-W10-OA-SurfaceRT/errorelementdata.jpg"/>
+<h6>Open a file explorer window and navigate to C:\Windows\System32</h6>
+<h6>Find LicensingUI.exe, make a backup (In case you want to see the error again).</h6>
+<h6>Right-Click it go to proprieties, and take ownership of the file (You can find tutorials on how to do it)</h6>
+<h6>Delete the file</h6>
+
+
 <h6 style="display: inline-block; line-height: 0px;">Open the Command prompt and type: </h6><h6 class="sourcecode" style="line-height: 0px; display: inline-block; padding-left: 7px;"> mountvol s: /s</h6>
 <h6>Now, follow the <a href="../W10-OA-SurfaceRT.html#mod-registry"><u>Modifying Registry keys</u></a> section again.</h6>
 <h6>Download the EFI.zip file</h6>
@@ -116,18 +104,9 @@
   </div>
 </div>
 </div>
-<h6>Delete all files in the S: partition except for the securebootdebugpolicy.p7b file (back up before deleting) </h6>
-<h6>Unzip the EFI.zip, and paste it into the S: partition. </h6>
-<h6 style="display: inline-block; line-height: 0px;">Type: </h6><h6 class="sourcecode" style="line-height: 0px; display: inline-block; padding-left: 7px;"> mountvol s: /d</h6>
-<h6>Restart the tablet</h6>
+
 </p>
-<div class="articlehorcardpadding">
-<div class="alertcard" style="background-color: #ffc90e; color: black;">
-  <div class="alertcontainer">
-    <h6>If your Surface does not turn on anymore, follow <a class="link" href="#not-turning-on">these steps</a> to fix it and come back here</h6> 
-  </div>
-</div>
-</div>
+
 
 <p></p>
 <p id="not-turning-on"></p>

@@ -58,7 +58,7 @@
 </header>
  <div class="hero-image" style="height:30%; background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../../img/back.png');">
   <div class="hero-text">
-    <h3 class="oswald">ANDROID AND LINUX MIGHT COME ON THE SURFACE RT!</h3>
+    <h3 class="oswald">UPDATE: LINUX IS WORKING ON THE SURFACE RT!</h3>
   </div>
 </div> 
 
@@ -78,13 +78,78 @@
 <img src="../../img/date.png" style="width:18px; padding: 0px 0px 0px 10px;"/> 
 <h6 style="display: inline-block; line-height: 0; font-size: 14px;"> May 11th 2020  </h6>
 <img src="../../img/edit.png" style="width:18px; padding: 0px 0px 0px 10px;"/> 
-<h6 style="display: inline-block; line-height: 0; font-size: 14px;"> May 11th 2020  </h6>
+<h6 style="display: inline-block; line-height: 0; font-size: 14px;"> October 31st 2020  </h6>
 <img src="../../img/writer_alexenferman.png" style="width:18px; padding: 0px 0px 0px 10px;"/> 
 <h6 style="display: inline-block; line-height: 0; font-size: 14px;"> Alexenferman  </h6>
 </div>
 <p>
 
 <p>
+<h3 class="oswald">UPDATE:</h3>
+<h6>After 5 months since this start of this project, named "Open SurfaceRT", created by CrackTheSurface, with many contributors, including me (I did not really contribute to the Linux side but more on the Windows side) , Linux finally boots up on the Surface RT. This is a huge milestone for the Surface RT community.</h6>
+</p>
+<img src />
+<p>
+<h4 class="opensans">Why Linux is better than Windows RT</h4>
+<h6>Thanks to the world of single board computers such as the Raspberry Pi and others, which run
+on ARM32 and ARM64 hardware, software compatibility issues will be something of the past. Not only we will be able to FINALLY run a up to date Firefox or Chromium browser,
+but you will be also able to run a ton of software, since most developers release a ARM32 package of their programs under Linux. Speed and stability will also be increased as well. There will be also
+many new usage cases for these old but still functionnal tablets, such as a good portable programming machine, small server, and basically any other thing you can already do with a single board computer.
+</h6>
+
+<h6>Well that sounds great! How can I install it? Well, we are not there yet. Although Linux is booting up, and showing a display signal through HDMI, this is only in the very early beta stage
+and requires a few weeks or months to build a fully working device tree to get full functionallity. Most functionalities don't work, such as the built in display, touch, etc.</h6>
+
+<h6>Also, to boot it, a Nvidia Tegra exploit known as Fusee Gelee needs to be ran from RCX mode to bypass the tablet's bootloader and to boot into uBoot, 
+which is a bootloader similar to GRUB. From there, we boot to Linux. This process has to be repeated each restart, as the Surface bootloader does not allow any
+unauthorized operating systems.</h6>
+
+<h6>Secureboot can also be completely disabled now, instead of only bypassing it as we did before with the Windows 10 installation.</h6>
+</p>
+<h4 class="opensans">Prices of Surface RTs are rising</h4>
+<h6>A lot of people want to put a new life into these devices, and it looks like the Open Surface RT project as well as the Windows 10 on ARM build has opened some eyes, and it looks
+like the Surface RT is in higher demand, and sellers of used Surface RT tablets have responded by rising the prices. Some sellers have installed Windows 10
+on these tablets and sold them for even more, and there are others who simply just changed the wallpaper of the desktop to a Windows 10 one.</h6>
+<p>
+
+
+<h4 class="opensans">Progress:</h4>
+<h6>At the moment, this is what is working. All information about Linux on the Surface RT and its current progress as well as the Discord server link can be found on the <a href="https://openrt.gitbook.io/open-surfacert/" target="_parent">Open Surface RT</a> website.<h6>
+<div class="articlehorcardpadding">
+<div class="alertcard" style="background-color: #0099ff; color: white">
+  <div class="alertcontainer">
+   <h6>
+Current Project Status: </h6>
+   <ul>
+  <li>Device Tree supports: SD/eMMC/UART-A/I2C/HDMI</li>
+  <li>UBoot can boot a zImage</li>
+  <li>Kernel boots</li>
+  <li>Root filesystem is available</li>
+  <li>All the things can be observed via UART-A (/HDMI)</li>
+  <li>Linux HDMI output! (via a external HDMI display; graphical console)</li>
+</ul> 
+<h6 style="color: black"></h6> 
+  </div>
+</div>
+</div>
+<a href="https://openrt.gitbook.io/open-surfacert/" target="_parent"><h6 style="line-height: 5px; margin: 0">Source: <u>The Open RT Surface Project</u><h6></a>
+</p>
+<h6>So basically this translates to:</h6>
+   <ul>
+  <li>SD card, internal storage, HDMI, Serial communication are working</li>
+  <li>UBoot bootloader can boot a kernel Image (zImage)</li>
+  <li>Kernel boots</li>
+  <li>Root filesystem is available</li>
+  <li>All the things can be observed via serial communication through the HDMI port</li>
+  <li>Linux display through HDMI output (via a external HDMI display; graphical console)</li>
+</ul>
+
+<h6>Thanks to everyone who contributed to Linux for the Surface RT as well as who contributed to make Windows 10 ARM better for the Surface RT</h6>
+
+
+<p>
+<h3 class="oswald">ORIGINAL POST FROM MAY 11TH:</h3>
+
 <h6>I think the Surface RT is a great tablet. Nice build quality, OK specs. But the huge problem is unsuprisingly the software. Windows 8 RT was just not good enough to make this tablet successful. Because of this operating system, the Surface RT is a big fail and an obsolete piece of tech. The leaked Windows 10 on arm was a suprise, but in my opinion, it's still not enough.</h6>
 </p>
 
@@ -130,7 +195,7 @@
 <script>
 
 var disqus_config = function () {
-this.page.url = 'https://sites.google.com/view/alexenferman/hacking/android-on-the-surface-rt';
+this.page.url = 'https://www.alexenferman.com/articles/SurfaceRT/linuxonthesrt';
 this.page.identifier = '/view/alexenferman/hacking/android-on-the-surface-rt';
 };
 (function() { // DON'T EDIT BELOW THIS LINE
