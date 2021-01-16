@@ -1,0 +1,581 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-180248741-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-180248741-1');
+</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto&family=Oswald&family=Open+Sans&family=Source+Code+Pro&display=swap" type="text/css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" type="text/css">
+<link rel="stylesheet" href="../../material/material.min.css">
+<link rel="stylesheet" href="../../style.css">
+<script src="../../material/material.min.js"></script>
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+<title>How to create a TWRP device tree - Alexenferman</title>
+<link rel="icon" type="image/png" href="../../favicon.png"/>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+ <script src="../../main.js"></script> 
+</head>
+<!-- START -->
+<body>
+<button onclick="topFunction()" id="myBtn" class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-button--colored">
+  <i class="material-icons">arrow_upward</i>
+</button>
+<!-- Sidebar Menu -->
+<header class="header" id="myHeader">
+<div id="mySidenav" class="sidenav">
+<!-- -->
+<a><button class="mdl-button mdl-js-button mdl-button--icon closebtn" href="javascript:void(0)" class="closebtn" onclick="closeNav()" id="tt3">
+  <i class="material-icons">close</i>
+  <div class="mdl-tooltip" data-mdl-for="tt3">
+  Close Menu
+  </div>
+  </button></a>
+<object height="400px" data="../../sidemenu.html"> 
+    ERROR
+</object>
+
+</div>
+<!-- Main Header -->
+<button onclick="window.location.href='../../articles.html';" class="mdl-button mdl-js-button mdl-button--icon menubutton">
+  <i class="material-icons">arrow_back</i>
+</button>
+<button onclick="openNav()" class="mdl-button mdl-js-button mdl-button--icon menubutton">
+  <i class="material-icons">menu</i>
+</button>
+<image class="logo" height="40px" src="../../img/logo.png"></image>
+<div class="navmenudiv">
+<object class="navmenuframe" data="../../navmenu.html"> 
+</object>
+</div>
+</div>
+</header>
+<div class="hero-image" style="height:35%; background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('./img-how-to-create-a-twrp-device-tree/buildtwrp.png');">
+  <div class="hero-text">
+    <h3 class="oswald">HOW TO CREATE A TWRP DEVICE TREE</h3>
+  </div>
+</div> 
+<div class="page">
+
+<aside class="rightcolumn">
+<object class="asidecontent" data="../../aside.html"> 
+    Error.
+</object>
+</aside>
+
+<div class="contentwithaside">
+
+<div class="article justify">
+
+<div class="allarticleinfo">
+<img src="../../img/date.png" style="width:18px; padding: 0px 0px 0px 10px;"/> 
+<h6 style="display: inline-block; line-height: 0; font-size: 14px;"> January 16th 2021  </h6>
+<img src="../../img/edit.png" style="width:18px; padding: 0px 0px 0px 10px;"/> 
+<h6 style="display: inline-block; line-height: 0; font-size: 14px;"> January 4th 2021  </h6>
+<img src="../../img/writer_alexenferman.png" style="width:18px; padding: 0px 0px 0px 10px;"/> 
+<h6 style="display: inline-block; line-height: 0; font-size: 14px;"> Alexenferman  </h6>
+</div>
+<p>
+
+<p>
+<h6>Have you ever wanted to build a TWRP recovery for your device without porting, but you don't know how to create a basic device tree? Today I will show you how to create a basic
+device tree for your device allowing you to build a TWRP recovery image for your device. Keep in mind as a dislaimer that this is a basic device tree, and there is no guarantee
+TWRP will work the first time. You may need to add things from a similar device tree to fix bugs, errors, etc... Let's get started!</h6>
+</p>
+
+<p>
+<h3 class="oswald">PREPARING TO BUILD A DEVICE TREE</h3>
+<h4 class="opensans">What you will need</h4>
+<h6>To begin creating a device tree for your device, you will need the following things:</h6> 
+
+<ul>
+<li>A bootloader unlocked Android device</li>
+<li>The stock recvoery from the phone you are building for. It can also be an older TWRP or CWM recovery compatible with the device. </li>
+<li>A Linux PC</li>
+
+<div class="articlehorcardpadding">
+<div class="alertcard" style="background-color: #0099ff; color: white">
+  <div class="alertcontainer">
+    <h6>When creating a device tree, you may also use a Windows based computer. However, when building TWRP, you can only use a Linux PC or Virtual Machine.</h6>
+  </div>
+</div>
+</div>
+
+<li>A Github or Gitlab account (optional)</li>
+<li>A notepad application</li>
+</ul>
+
+<h4 class="opensans">Getting basic specifications of the device</h4>
+
+<h6>To create a device tree, we must get some basic specifications. Download apps such as CPU-Z, AIDA64 or HWinfo to view the specs of your device and take a note of the following things:</h6>
+<ul>
+<li>SoC Model - (Ex. Snapdragon 210)</li>
+<li>Architecture - (Ex. arm)</li>
+<li>Device Model - (Ex. ZTE Avid Plus)</li>
+<li>Manufacturer - (Ex. ZTE)</li>
+<li>Model - (Ex. Z828)</li>
+<li>Brand - (Ex. zte)</li>
+<li>Board/Codename - (Ex. achill)</li>
+<li>Platform - (Ex. msm8909)</li>
+</ul>
+
+<p>
+<img class="quad-image" src="./img-how-to-create-a-twrp-device-tree/11.png" style="padding: 5px; display: inline-block;"></img>
+<img class="quad-image" src="./img-how-to-create-a-twrp-device-tree/12.png" style="padding: 5px; display: inline-block;"></img>
+<img class="quad-image" src="./img-how-to-create-a-twrp-device-tree/13.png" style="padding: 5px; display: inline-block;"></img>
+<img class="quad-image" src="./img-how-to-create-a-twrp-device-tree/14.png" style="padding: 5px; display: inline-block;"></img>
+</p>
+
+<h4 class="opensans">Extracting the stock recovery image</h4>
+<h6>To get more information about the device such as the Kernel CMDLINE, offsets and more, we must extract the stock boot image. You can use multiple tools 
+to acomplish the same job, but I will be using <a class="link" href="https://github.com/GameTheory-/mktool" target="_blank">mktool</a> as it is open source and very easy to use.</h6>
+
+<h6>Download the Binaries from the <a class="link" href="https://github.com/GameTheory-/mktool/releases" target="_blank">releases</a> section</h6>
+<h6>Extract the ZIP file somewhere in the /home/user folder.</h6>
+<h6>Place the recovery.img in the "input" folder.</h6>
+<h6>Using the terminal, navigate to the mktool folder and open the program using the <code>java -jar mktool.jar</code> command.</h6>
+<h6>After that, go to the "Unpack" tab, select your boot image, and click on "Unpack Image"</h6>
+
+<img id="kernelcmd" src="./img-how-to-create-a-twrp-device-tree/21.png" />
+
+<h6>Take a note of the output of the console at the bottom. You will need it later.</h6>
+
+<pre>
+BOARD_KERNEL_CMDLINE androidboot.hardware=qcom user_debug=31 msm_rtb.filter=0x3F ehci-hcd.park=3 
+androidboot.bootdevice=7824900.sdhci lpm_levels.sleep_disabled=1 earlyprintk
+BOARD_KERNEL_BASE 80000000
+BOARD_NAME 
+BOARD_PAGE_SIZE 2048
+BOARD_HASH_TYPE sha1
+BOARD_KERNEL_OFFSET 00008000
+BOARD_RAMDISK_OFFSET 02000000
+BOARD_SECOND_OFFSET 00f00000
+BOARD_TAGS_OFFSET 00000100
+BOARD_DT_SIZE 7116800
+</pre>
+
+<h6>Also, you will find the extracted files from the recovery image in the "/extracted" folder.</h6>
+
+<pre>
+extracted
+     |
+     configs
+     | `-recovery.img-base
+     |   recovery.img-board
+     |   recovery.img-cmdline
+     |   recovery.img-dt
+     |   etc...
+     |
+     ramdisk
+     | `- init.rc
+     |    ueventd.rc
+     |	  fstab.qcom
+     |	  default.prop
+     |	  etc...
+     |
+     recovery.img-zImage
+</pre>
+
+<p></p>
+<p></p>
+
+<h3 class="oswald">CREATING THE DEVICE TREE</h3>
+<h6>To create a device tree, you must create the following files:</h6>
+<p></p>
+<p></p>
+
+<h4 class="opensans">Android.mk</h4>
+<h6>Add the following lines to the Android.mk file.</h6>
+
+<pre>
+LOCAL_PATH := $(call my-dir)
+
+ifeq ($(TARGET_DEVICE), #codename#)
+include $(call all-subdir-makefiles,$(LOCAL_PATH))
+endif
+</pre>
+<h6>Replace the #CODENAME# with the Board/Codename spec we noted previously. In my case, it's "achill".</h6>
+
+<p></p>
+<p></p>
+<h4 class="opensans">AndroidProducts.mk</h4>
+<h6>Add the following lines to the AndroidProducts.mk file.</h6>
+
+<pre>
+PRODUCT_MAKEFILES := \
+    $(LOCAL_DIR)/omni_#CODENAME#.mk
+</pre>
+
+<h6>Replace the #CODENAME# with the Board/Codename spec we noted previously. In my case, it's "achill", so omni_achill.mk</h6>
+
+<p></p>
+<p></p>
+<h4 class="opensans">BoardConfig.mk</h4>
+<h6>BoardConfig is more complicated to create. Follow the intructions carefully.</h6>
+<h6>Add the following lines to the BoardConfig.mk file.</h6>
+
+
+<pre>
+DEVICE_PATH := device/#Brand#/#Codename#
+</pre>
+
+<h6>Replace the #CODENAME# with the Board/Codename and #Brand# with the Brand spec we noted previously. In my case, it's "device/zte/achill".</h6>
+
+<h6>Next, add the following lines:</h6>
+<pre>
+# For building with TWRP minimal manifest
+ALLOW_MISSING_DEPENDENCIES := true
+</pre>
+
+<pre>
+# Architecture (arm)                         # Architecture (arm64)
+TARGET_ARCH := arm                           TARGET_ARCH := arm64
+TARGET_ARCH_VARIANT := armv7-a-neon          TARGET_ARCH_VARIANT := armv8-a
+TARGET_CPU_ABI := armeabi-v7a          OR    TARGET_CPU_ABI := arm64-v8a
+TARGET_CPU_ABI2 := armeabi                   TARGET_CPU_ABI2 :=
+TARGET_CPU_VARIANT := generic                TARGET_CPU_VARIANT := generic
+</pre>
+<h6>Depending on your device architecture determined from the specs (arm or arm64), chose the correct one.</h6>
+<h6>Next, add the following lines:</h6>
+<pre>
+# Assert
+TARGET_OTA_ASSERT_DEVICE := #Codename#
+</pre>
+<h6>Replace the #CODENAME# with the Board/Codename spec we noted previously. In my case, it's "achill", so "TARGET_OTA_ASSERT_DEVICE := achill"</h6>
+
+<h6>Next, add the following lines:</h6>
+<pre>
+# File systems
+BOARD_HAS_LARGE_FILESYSTEM := true
+BOARD_SYSTEMIMAGE_PARTITION_TYPE := ext4
+BOARD_USERDATAIMAGE_FILE_SYSTEM_TYPE := ext4
+TARGET_USERIMAGES_USE_EXT4 := true
+TARGET_USERIMAGES_USE_F2FS := true
+</pre>
+<h6>NOTE: If you are building for a very old phone, it may not be using EXT4 for its partitions.</h6>
+
+
+<pre>
+# Kernel
+BOARD_KERNEL_CMDLINE := #Cmdline#
+</pre>
+<h6>Enter the kernel cmdline we found after extracting the Recovery Image. Go <a class="link" href="#kernelcmd">here</a> to see its value</h6>
+<h6>Next, add the following line:</h6>
+<pre>
+TARGET_PREBUILT_KERNEL := $(DEVICE_PATH)/prebuilt/#Image Type#
+</pre>
+<h6>You will see a kernel file in the extracted folder. Remove the "recovery.img-" string from the filename and you should see a filename such as zImage, Image.gz or zImage-dtb. 
+Replace the #Image Type# with the approrpriate Kernel filename.</h6>
+<pre>
+TARGET_PREBUILT_DT := $(DEVICE_PATH)/prebuilt/dt.img
+</pre>
+<h6>Only add this if there is a recovery.img-dt in the /extracted/configs folder.</h6>
+<h6>Next, add the following lines:</h6>
+<pre>
+BOARD_KERNEL_BASE := 0x80000000
+BOARD_KERNEL_PAGESIZE := 2048
+BOARD_RAMDISK_OFFSET := 0x02000000
+BOARD_KERNEL_TAGS_OFFSET := 0x00000100
+</pre>
+<h6>Enter the kernel base, pagesize, etc... we found after extracting the Recovery Image. Go <a class="link" href="#kernelcmd">here</a> to see the values.</h6>
+<h6>Next, add the following lines:</h6>
+<pre>
+BOARD_FLASH_BLOCK_SIZE := 131072 # (BOARD_KERNEL_PAGESIZE * 64)
+BOARD_MKBOOTIMG_ARGS += --ramdisk_offset $(BOARD_RAMDISK_OFFSET)
+BOARD_MKBOOTIMG_ARGS += --tags_offset $(BOARD_KERNEL_TAGS_OFFSET)
+</pre>
+<pre>
+BOARD_MKBOOTIMG_ARGS += --dt $(TARGET_PREBUILT_DT)
+</pre>
+<h6>Only add the last line if there is a recovery.img-dt in the /extracted/configs folder.</h6>
+
+<h6>Next, add the following lines:</h6>
+<pre>
+# Platform
+TARGET_BOARD_PLATFORM := #Platform#
+</pre>
+<h6>Replace the #Platform# with the Platform spec we noted previously. In my case, it's "msm8909", so "TARGET_BOARD_PLATFORM := msm8909".</h6>
+<h6>Next, add the following lines:</h6>
+<pre>
+# Hack: prevent anti rollback
+PLATFORM_SECURITY_PATCH := 2099-12-31
+PLATFORM_VERSION := 16.1.0
+</pre>
+
+<h6>These lines will set the Security patch of the recovery to 2099, so the stock ROM will not overwrite the custom recovery with the stock one.</h6>
+<h6>Next, add the default TWRP flags. You may refer to this <a class="link" href="https://forum.xda-developers.com/t/twrp-flags-for-boardconfig-mk.3333970/" target="_blank">documentation</a> if you wish or need to add more TWRP Flags.
+Using TWRP flags, you can add or remove features in TWRP such as extra languages, horizontal screen, themes etc...</h6>
+<pre>
+# TWRP Configuration
+TW_THEME := portrait_hdpi
+TW_EXTRA_LANGUAGES := true #Only if you need it
+TW_SCREEN_BLANK_ON_BOOT := true
+TW_INPUT_BLACKLIST := "hbtp_vm"
+</pre>
+
+<p></p>
+<p></p>
+<h4 class="opensans">device.mk</h4>
+<h6>Add the following lines to the device.mk file.</h6>
+<pre>
+LOCAL_PATH := device/#Brand#/#Codename#
+</pre>
+<h6>Replace the #CODENAME# with the Board/Codename and #Brand# with the Brand spec we noted previously. In my case, it's "device/zte/achill".</h6>
+
+<p></p>
+<p></p>
+<h4 class="opensans">omni_#Codename#.mk</h4>
+<h6>Replace the #CODENAME# with the Board/Codename spec we noted previously. In my case, it's "achill", so omni_achill.mk</h6>
+
+<h6>Add the following lines to the omni_#Codename#.mk file.</h6>
+
+<pre>
+# Inherit from those products. Most specific first.
+$(call inherit-product-if-exists, $(SRC_TARGET_DIR)/product/embedded.mk)
+$(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
+$(call inherit-product, $(SRC_TARGET_DIR)/product/languages_full.mk)
+
+# Inherit from device
+$(call inherit-product, device/#Brand#/#Codename#/device.mk)
+
+# Inherit some common Omni stuff.
+$(call inherit-product, vendor/omni/config/common.mk)
+$(call inherit-product, vendor/omni/config/gsm.mk)
+
+# Device identifier. This must come after all inclusions
+PRODUCT_DEVICE := #Codename#
+PRODUCT_NAME := omni_#Codename#
+PRODUCT_BRAND := #Brand#
+PRODUCT_MODEL := #Model#
+PRODUCT_MANUFACTURER := #Brand#
+PRODUCT_RELEASE_NAME := #Brand# #Model#
+</pre>
+
+<h6>Replace the #CODENAME# with the Board/Codename, #Brand# with the Brand and #Model# with the Model spec we noted previously. In my case, it's achill, zte and Z828.</h6>
+
+
+<p></p>
+<p></p>
+<h4 class="opensans">vendorsetup.sh</h4>
+<h6>Add the following lines to the vendorsetup.sh file.</h6>
+
+<pre>
+add_lunch_combo omni_#Codename#-userdebug
+add_lunch_combo omni_#Codename#-eng
+</pre>
+
+<h6>Replace the #CODENAME# with the Board/Codename spec we noted previously. In my case, it's achill.</h6>
+
+
+<p></p>
+<p></p>
+<h4 class="opensans">recovery.fstab</h4>
+<h6>Go to your extracted recovery image.</h6>
+<h6>Navigate to /ramdisk/etc</h6>
+<h6>You should see a file called "recovery.fstab"</h6>
+<h6>This is mine:</h6>
+
+<pre>
+/dev/block/bootdevice/by-name/sbl1         /sbl1           emmc
+/dev/block/bootdevice/by-name/rpm          /rpm            emmc
+/dev/block/bootdevice/by-name/tz           /tz             emmc
+/dev/block/bootdevice/by-name/persist      /persist        ext4
+/dev/block/bootdevice/by-name/aboot        /emmcboot       emmc 
+/dev/block/bootdevice/by-name/modem        /modem          emmc  
+/dev/block/bootdevice/by-name/config       /persistent     emmc 
+/dev/block/bootdevice/by-name/echarge      /echarge        emmc   
+/dev/block/bootdevice/by-name/splash       /splash         emmc   
+/dev/block/bootdevice/by-name/carrier      /carrier        ext4    
+/dev/block/bootdevice/by-name/system       /system         ext4   
+/dev/block/bootdevice/by-name/cache        /cache          ext4    
+/dev/block/bootdevice/by-name/userdata     /data           ext4   
+/dev/block/mmcblk1p1                       /sdcard         vfat    
+/dev/block/bootdevice/by-name/boot         /boot           emmc   
+/dev/block/bootdevice/by-name/recovery     /recovery       emmc 
+/dev/block/bootdevice/by-name/misc         /misc           emmc   
+</pre>
+
+<h6>Remove any partitions you don't want to touch, such as /emmcboot, /sbl1, /tz, then change the order (if necessary) of the coloumns. It should look similar to this:</h6>
+
+<pre>
+# mount point       fstype    device                                  flags
+/persist            ext4      /dev/block/bootdevice/by-name/persist   flags=display="Persist"
+/persist_image      emmc      /dev/block/bootdevice/by-name/persist   flags=display="Persist image";backup=1;flashimg=1
+/system             ext4      /dev/block/bootdevice/by-name/system    flags=backup=1
+/system_image       emmc      /dev/block/bootdevice/by-name/system    flags=display="System image";backup=1;flashimg=1
+/cache              ext4      /dev/block/bootdevice/by-name/cache                                   
+/data               ext4      /dev/block/bootdevice/by-name/userdata                                
+/boot               emmc      /dev/block/bootdevice/by-name/boot                                    
+/recovery           emmc      /dev/block/bootdevice/by-name/recovery  flags=backup=1
+/sdcard             vfat      /dev/block/mmcblk1p1 
+/misc               emmc      /dev/block/bootdevice/by-name/misc  
+</pre>
+
+<h6>Replace the #CODENAME# with the Board/Codename spec we noted previously. In my case, it's achill.</h6>
+
+<p></p>
+<p></p>
+<h4 class="opensans">prebuilt folder</h4>
+<h6>Create a folder called "prebuilt".</h6>
+<h6>Go to your extracted recovery image. You will see a file named: "recovery.img-zImage" or "recovery.img-image.gz-dtb" or "recovery.img-zImage-dtb".</h6>
+<h6>Rename the file, and remove the "recovery.img-" prefix from the filename. The end result should look like this: "zImage", "image.gz-dtb" or "zImage-dtb".</h6>
+<h6>Copy the newly renamed file to the prebuilt folder.</h6>
+
+<pre>
+device tree
+     |
+     Android.mk
+     AndroidProducts.mk
+     BoardConfig.mk
+     device.mk
+     etc...
+     |
+     prebuilt
+       `- zImage
+          dt.img //ONLY IF THE KERNEL NAME IS "zImage"
+</pre>
+<div class="articlehorcardpadding">
+<div class="alertcard" style="background-color: #0099ff; color: white">
+  <div class="alertcontainer">
+    <h6>NOTE: If the Kernel name is "zImage", you should copy the file called "recovery.img-dt" found in the /configs folder in your extracted recovery 
+	to the /prebuilt folder of the device tree. Rename it to "dt.img".</h6>
+  </div>
+</div>
+</div>
+
+<p></p>
+<p></p>
+<h4 class="opensans">recovery/root folder</h4>
+<h6>Create a folder called "recovery".</h6>
+<h6>Inside the recovery folder, create another folder called "root"</h6>
+<h6>Copy all the files (Not folders!) from the /ramdisk folder of extracted recovery to the recovery / root folder of the device tree.</h6>
+<h6>Be careful, as you have to remove some of the files. There is no one answer to this question, as it is always different from device to device. However, I have put
+this list of which files should you keep or remove from the recovery/root folder. Use your judgment to see which files you should add or not add.</h6>
+
+<pre>
+device tree
+   |
+   Android.mk
+   etc...
+   |
+   recovery
+    `-root                    SHOULD YOU ADD IT?
+        `-init                NO       
+          init.qcom.usb.sh    YES 
+          sepolicy            NO
+          init.class_main.sh  YES          
+          init.rc             YES           
+          service_contexts    NO
+          default.prop        YES   
+          property_contexts   NO   
+          file_contexts       NO 
+          init.qcom.early.sh  YES
+          ueventd.qcom.rc     YES
+          fstab.qcom          YES
+          init.qcom.sh        YES               
+          seapp_contexts      NO    
+          ueventd.rc          YES
+          init.qcom.fixup.sh  YES  
+          selinux_version     NO    
+          verity_key          NO
+</pre>
+
+<h6>And there you go! You have created your very own TWRP device tree!</h6>
+<h6>Unfortunately, there is not a 100% guarantee that this device tree will create a functionnal TWRP image, so we recommend searching on Github for a device similar 
+to yours (Same Chipset) and compare the contents of it to see if you missed anything.</h6>
+<h6>For older MTK devices, you might need a custom mkbootimg which you will find in a similar device tree, if required.</h6>
+<h6>See the final result of the device tree I created <a class="link" href="https://github.com/alexenferman/twrp-device_zte_achill" target="_blank">here</a>.</h6>
+
+
+<h4 class="opensans">You are done!</h4>
+<h4 class="opensans">If you have any questions, or need help creating your device tree, leave a comment below!</h4>
+<p></p>
+<object class="authorcard" data="../../html/author-alexenferman.html"> 
+    Error.
+</object>
+
+<p>
+<h3 class="oswald">COMMENTS</h3>
+<div class="categorycardpadding">
+<div id="showcommentbutton" class="categorycard" style="width: 200px; cursor: pointer;" onclick="showcomments()">
+<img src="../../img/comments.png" alt="Avatar" style="height: 25px; filter: brightness(90%); padding: 13px 0px 13px 13px;">
+  <h6 class="categorycardtext" style="line-height: 3.5px;"> Show Comments</h6>
+</div>
+</div>
+<div class="comment-section" id="comment-section">
+</p>
+
+<div id="disqus_thread"></div>
+<script id="dsq-count-scr" src="//alexenferman.disqus.com/count.js" async></script>
+<script>
+
+var disqus_config = function () {
+this.page.url = 'https://www.alexenferman.com/articles/TWRP/how-to-create-a-twrp-device-tree';
+this.page.identifier = 'articles/TWRP/how-to-create-a-twrp-device-tree';
+};
+(function() { // DON'T EDIT BELOW THIS LINE
+var d = document, s = d.createElement('script');
+s.src = 'https://alexenferman.disqus.com/embed.js';
+s.setAttribute('data-timestamp', +new Date());
+(d.head || d.body).appendChild(s);
+})();
+</script>
+</div>
+
+</div>
+</div>
+</div>
+<!-- End of content -->
+
+
+<footer class="footer">
+<object class="footerstuff" data="../../footer.html"> 
+    ERROR
+</object>
+</footer>
+
+
+
+
+<script>
+window.onscroll = function() {myFunction(); scrollFunction(); headerFunction()};
+
+var header = document.getElementById("myHeader");
+var sticky = header.offsetTop;
+
+function myFunction() {
+  if (window.pageYOffset > sticky) {
+    header.classList.add("sticky");
+  } else {
+    header.classList.remove("sticky");
+  }
+}
+
+mybutton = document.getElementById("myBtn");
+
+// When the user scrolls down 20px from the top of the document, show the button
+
+function scrollFunction() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    mybutton.style.display = "block";
+  } else {
+    mybutton.style.display = "none";
+  }
+}
+
+// When the user clicks on the button, scroll to the top of the document
+function topFunction() {
+  document.body.scrollTop = 0; // For Safari
+  document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+} 
+</script>
+
+</body>
+</html> 
