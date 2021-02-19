@@ -2,7 +2,7 @@
 
 function headerFunction() {
   if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
-  	document.getElementById("myHeader").style.backgroundColor = "#4d4d4d";
+  	document.getElementById("myHeader").style.backgroundColor = "#343a40";
 	document.getElementById("myHeader").style.boxShadow = "0 4px 8px 0 rgba(0, 0, 0, 0.3), 0 6px 20px 0 rgba(0, 0, 0, 0.3)";
   } else {
 	document.getElementById("myHeader").style.backgroundColor = "rgba(255, 99, 71, 0)";
@@ -42,7 +42,7 @@ function topFunction() {
 function openNav() {
   document.getElementById("mySidenav").style.width = "300px";
   document.getElementById("main").style.marginLeft = "250px";
-  document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
+  document.body.style.backgroundColor = "rgba(7,7,7,0.6)";
 }
 
 function closeNav() {
@@ -309,3 +309,8 @@ function root() {
 	x.style.display = "block";
 }
 
+function sendform() {
+		
+	var x = document.getElementById("subsc");
+	x.style.display = "block";
+}
